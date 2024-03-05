@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-HCR+5Xr7eOoPJLOaVz9D9GIeF/xyBno/Usyl6c1M2QzN2iydq+DZlXs+tJvjtKbHw54byl4yqgpXZiHr8Yp8Fw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="contactstyle.css">
+    <title>Profil Abonné</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container1 {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .profile-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .profile-header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .profile-header h4 {
+            margin: 5px 0;
+        }
+        .profile-header p {
+            margin: 5px 0 20px;
+            color: #666;
+        }
+        .profile-navigation {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .profile-navigation a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 10px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+        }
+        .profile-content {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .btn-edit-profile {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-edit-profile:hover {
+    background-color: #0056b3;
+}
+        .friend-list {
+            list-style: none;
+            padding: 0;
+        }
+        .friend-list li {
+            margin-bottom: 10px;
+        }
+        .friend-list img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        .friend-list .friend-info {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .friend-list .friend-actions {
+            display: inline-block;
+            float: right;
+        }
+        .friend-list .friend-actions button {
+            padding: 5px 10px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+        }
+        .add-friend-list {
+            list-style: none;
+            padding: 0;
+        }
+        .add-friend-list li {
+            margin-bottom: 10px;
+        }
+        .add-friend-list img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        .add-friend-list .friend-info {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .add-friend-list .friend-actions {
+            display: inline-block;
+            float: right;
+        }
+        .add-friend-list .friend-actions button {
+            padding: 5px 10px;
+            background-color: #28a745;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <nav id="navigation" class="navbar navbar-fixed-top">
+        <!-- <div class="container">
+          <div class="row"> -->
+            <!-- Add the new list item for your site name -->
+          <ul class="menu">
+          <li><a href="/" class="active"><span class="red-text">Faso</span><span class="yellow-text">Evenement</span><span class="green-text">.bf</span></a></li>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="Evenements.html">Événements</a></li>
+          <li><a href="About.html">À propos</a></li>
+          <li><a href="#index2.html">Contact</a></li>
+          <li><a href="connexion.html">S'inscrire/Se connecter</a></li>
+            <li>
+                <!-- Ajoutez l'avatar de profil ici -->
+                <a href="profile.html">
+                    <img class="user-loggedin-avatar" src="assets/images/default_user_icon.png" width="30px" height="30px" />
+                    <span style="font-family: sans-serif;color:wheat;">Mon Profil</span> 
+                </a>
+            </li>
+            <li class="slider"></li>
+      </ul>
+      </nav>
+    <div class="container1">
+        <div class="profile-header">
+            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Profile Picture">
+            <h4>Sean Ngu</h4>
+            <!-- Ajoutez d'autres informations si nécessaire -->
+            <a href="#" class="btn btn-edit-profile">Modifier le profil</a>
+        </div>
+        <div class="profile-navigation">
+            <a href="#"class="active">À propos</a>
+                <a href="#"class="active">Événements à venir</a>
+                <a href="#"class="active">Recherche d'événements</a>
+            <a href="#" class="active">Amis</a>
+        </div>
+        <div class="profile-content">
+            <h4>Liste d'amis (3)</h4>
+            <ul class="friend-list">
+                <li>
+                    <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Friend 1">
+                    <div class="friend-info">James Pittman</div>
+                    <div class="friend-actions">
+                    
+                            <button onclick="openChat()">Envoyer un message</button>
+                        
+                    </div>
+                </li>
+                <li>
+                    <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="Friend 1">
+                    <div class="friend-info">Peter Berg</div>
+                    <div class="friend-actions">
+                    
+                            <button onclick="openChat()">Envoyer un message</button>
+                        
+                    </div>
+                </li>
+                <li>
+                    <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="Friend 1">
+                    <div class="friend-info">Janine Row</div>
+                    <div class="friend-actions">
+                    
+                            <button onclick="openChat()">Envoyer un message</button>
+                        
+                    </div>
+                </li>
+                <!-- Ajoutez d'autres amis de manière similaire -->
+            </ul>
+            <h4>Liste d'amis à ajouter</h4>
+            <ul class="add-friend-list">
+                <li>
+                    <img src="https://bootdey.com/img/Content/avatar/avatar8.png" alt="New Friend 1">
+                    <div class="friend-info">New Friend 1</div>
+                    <div class="friend-actions">
+                        <button>Ajouter comme ami</button>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="New Friend 1">
+                    <div class="friend-info">New Friend 2</div>
+                    <div class="friend-actions">
+                        <button>Ajouter comme ami</button>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://bootdey.com/img/Content/avatar/avatar5.png" alt="New Friend 1">
+                    <div class="friend-info">New Friend 3</div>
+                    <div class="friend-actions">
+                        <button>Ajouter comme ami</button>
+                    </div>
+                </li>
+                <!-- Ajoutez d'autres amis à ajouter de manière similaire -->
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

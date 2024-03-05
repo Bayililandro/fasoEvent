@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Événements</title>
+    <link rel="stylesheet" href="style3.css">
+
+     
+</head>
+<body>
+    <nav id="navigation" class="navbar navbar-fixed-top">
+        <!-- <div class="container">
+          <div class="row"> -->
+            <!-- Add the new list item for your site name -->
+          <ul class="menu">
+          <li><a href="/" class="active"><span class="red-text">Faso</span><span class="yellow-text">Evenement</span><span class="green-text">.bf</span></a></li>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="Evenements.html">Événements</a></li>
+          <li><a href="About.html">À propos</a></li>
+          <li><a href="#index2.html">Contact</a></li>
+          <li><a href="connexion.html">S'inscrire/Se connecter</a></li>
+          <li>
+              <!-- Ajoutez l'avatar de profil ici -->
+              <a href="profile.html">
+                  <img class="user-loggedin-avatar" src="assets/images/default_user_icon.png" width="20px" height="20px" />
+                  <span style="font-family: sans-serif;color:wheat;">Mon Profil</span>
+              </a>
+          </li>
+          <li class="slider"></li>
+      </ul>
+<header>
+    <h1>Événements à venir</h1>
+</header>
+
+<section id="event-filters">
+    <label for="category">Catégorie:</label>
+    <select id="category">
+        <option value="all">Toutes les catégories</option>
+        <option value="cinema">Cinéma</option>
+        <option value="concert">Concert</option>
+        <!-- Ajoutez d'autres options selon vos catégories -->
+    </select>
+
+    <label for="date">Date:</label>
+    <input type="date" id="date">
+
+    <label for="city">Ville:</label>
+    <input type="text" id="city">
+
+    <button onclick="searchEvents()">Rechercher</button>
+</section>
+
+<section id="event-list">
+    <!-- Les événements seront affichés ici -->
+    <!-- Utilisez JavaScript pour remplir dynamiquement cette section -->
+</section>
+ <!-- Nouvelle Section - Carrousels d'Images d'Événements -->
+ <section id="event-carousel" class="bg-gray-light-2" style="padding-top: 1rem; padding-bottom: 3rem;">
+    <div class="container container-xxl">
+      <div class="section-title text-center">
+        <h1 class="display-5 mb-5">Événements à venir</h1>
+      </div>
+      
+      <!-- Carousel d'Images d'Événements -->
+      <div class="row g-4">
+        <!-- Premier Événement -->
+         
+  <!-- Troisième Événement -->
+  <!-- Troisième Événement - Aperçu -->
+  <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+    <div class="service-item">
+        <div class="overflow-hidden">
+            <img class="img-fluid custom-image-size" src="sia.jpg" alt="Événement 3">
+        </div>
+        <div class="p-4 text-center border border-5 border-light border-top-0">
+            <h4 class="mb-3">SIA 2023</h4>
+            <p>Date: 10 Février 2024</p>
+            <p>Lieu: Côte d'Ivoire</p>
+                <!-- Section des informations détaillées (cachée par défaut) -->
+         <div id="more-info-sia" style="display: none;">
+          <p>Heure: 18h00</p>
+          <p>Ville: Abidjan</p>
+          <p>Catégorie: Musique</p>
+          <p>Description: Une description détaillée de l'événement...</p>
+           </div>
+            <button class="btn btn-more-info" onclick="showMoreInfo('sia')">Voir plus</button>
+            <div class="rating">Note: 4.8</div>
+            <button class="btn btn-subscribe">S'abonner</button>
+            <button class="btn btn-rate">Apprécier</button>
+        </div>
+    </div>
+  </div>
+  
+  
+  
+  
+        <!-- Deuxième Événement -->
+  <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+    <div class="service-item">
+      <div class="overflow-hidden">
+        <img class="img-fluid custom-image-size" src="Etalons.jpg" alt="Événement 1">
+      </div>
+      <div class="p-4 text-center border border-5 border-light border-top-0">
+        <h4 class="mb-3">SIA 2023</h4>
+        <p>Date: 10 Février 2024</p>
+        <p>Lieu: Côte d'Ivoire</p>
+            <!-- Section des informations détaillées (cachée par défaut) -->
+     <div id="more-info-sia" style="display: none;">
+      <p>Heure: 18h00</p>
+      <p>Ville: Abidjan</p>
+      <p>Catégorie: Musique</p>
+      <p>Description: Une description détaillée de l'événement...</p>
+       </div>
+        <button class="btn btn-more-info" onclick="showMoreInfo('sia')">Voir plus</button>
+        <div class="rating">Note: 4.8</div>
+        <button class="btn btn-subscribe">S'abonner</button>
+        <button class="btn btn-rate">Apprécier</button>
+    </div>
+  </div>
+  </div>
+  
+     <!-- troisième Événement -->
+   
+  <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+    <div class="service-item">
+      <div class="overflow-hidden">
+        <img class="img-fluid custom-image-size" src="sia.jpg" alt="Événement 1">
+      </div>
+      <div class="p-4 text-center border border-5 border-light border-top-0">
+        <h4 class="mb-3">SIA 2023</h4>
+        <p>Date: 10 Février 2024</p>
+        <p>Lieu: Côte d'Ivoire</p>
+            <!-- Section des informations détaillées (cachée par défaut) -->
+     <div id="more-info-sia" style="display: none;">
+      <p>Heure: 18h00</p>
+      <p>Ville: Abidjan</p>
+      <p>Catégorie: Musique</p>
+      <p>Description: Une description détaillée de l'événement...</p>
+       </div>
+        <button class="btn btn-more-info" onclick="showMoreInfo('sia')">Voir plus</button>
+        <div class="rating">Note: 4.8</div>
+        <button class="btn btn-subscribe">S'abonner</button>
+        <button class="btn btn-rate">Apprécier</button>
+    </div>
+  </div>
+  </div>
+  
+      <!-- Deuxième Événement -->
+   <!-- Premier Événement -->
+  <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+    <div class="service-item">
+      <div class="overflow-hidden">
+        <img class="img-fluid custom-image-size" src="balafon.webp" alt="Événement 1">
+      </div>
+      <div class="p-4 text-center border border-5 border-light border-top-0">
+        <h4 class="mb-3">SIA 2023</h4>
+        <p>Date: 10 Février 2024</p>
+        <p>Lieu: Côte d'Ivoire</p>
+            <!-- Section des informations détaillées (cachée par défaut) -->
+     <div id="more-info-sia" style="display: none;">
+      <p>Heure: 18h00</p>
+      <p>Ville: Abidjan</p>
+      <p>Catégorie: Musique</p>
+      <p>Description: Une description détaillée de l'événement...</p>
+       </div>
+        <button class="btn btn-more-info" onclick="showMoreInfo('sia')">Voir plus</button>
+        <div class="rating">Note: 4.8</div>
+        <button class="btn btn-subscribe">S'abonner</button>
+        <button class="btn btn-rate">Apprécier</button>
+    </div>
+  </div>
+  </div>
+   <!-- Premier Événement -->
+   <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+    <div class="service-item">
+      <div class="overflow-hidden">
+        <img class="img-fluid custom-image-size" src="masque.jpg" alt="Événement 1">
+      </div>
+      <div class="p-4 text-center border border-5 border-light border-top-0">
+        <h4 class="mb-3">SIA 2023</h4>
+        <p>Date: 10 Février 2024</p>
+        <p>Lieu: Côte d'Ivoire</p>
+            <!-- Section des informations détaillées (cachée par défaut) -->
+     <div id="more-info-sia" style="display: none;">
+      <p>Heure: 18h00</p>
+      <p>Ville: Abidjan</p>
+      <p>Catégorie: Musique</p>
+      <p>Description: Une description détaillée de l'événement...</p>
+       </div>
+        <button class="btn btn-more-info" onclick="showMoreInfo('sia')">Voir plus</button>
+        <div class="rating">Note: 4.8</div>
+        <button class="btn btn-subscribe">S'abonner</button>
+        <button class="btn btn-rate">Apprécier</button>
+    </div>
+  </div>
+  </div>
+   <!-- Premier Événement -->
+   <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+    <div class="service-item">
+      <div class="overflow-hidden">
+        <img class="img-fluid custom-image-size" src="FESPACO-scaled.jpeg" alt="Événement 1">
+      </div>
+      <div class="p-4 text-center border border-5 border-light border-top-0">
+        <h4 class="mb-3">SIA 2023</h4>
+        <p>Date: 10 Février 2024</p>
+        <p>Lieu: Côte d'Ivoire</p>
+            <!-- Section des informations détaillées (cachée par défaut) -->
+     <div id="more-info-sia" style="display: none;">
+      <p>Heure: 18h00</p>
+      <p>Ville: Abidjan</p>
+      <p>Catégorie: Musique</p>
+      <p>Description: Une description détaillée de l'événement...</p>
+       </div>
+        <button class="btn btn-more-info" onclick="showMoreInfo('sia')">Voir plus</button>
+        <div class="rating">Note: 4.8</div>
+        <button class="btn btn-subscribe">S'abonner</button>
+        <button class="btn btn-rate">Apprécier</button>
+    </div>
+  </div>
+  </div>
+   <!-- Premier Événement -->
+   <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+    <div class="service-item">
+      <div class="overflow-hidden">
+        <img class="img-fluid custom-image-size" src="alif.jpg" alt="Événement 1">
+      </div>
+      <div class="p-4 text-center border border-5 border-light border-top-0">
+        <h4 class="mb-3">SIA 2023</h4>
+        <p>Date: 10 Février 2024</p>
+        <p>Lieu: Côte d'Ivoire</p>
+            <!-- Section des informations détaillées (cachée par défaut) -->
+     <div id="more-info-sia" style="display: none;">
+      <p>Heure: 18h00</p>
+      <p>Ville: Abidjan</p>
+      <p>Catégorie: Musique</p>
+      <p>Description: Une description détaillée de l'événement...</p>
+       </div>
+        <button class="btn btn-more-info" onclick="showMoreInfo('sia')">Voir plus</button>
+        <div class="rating">Note: 4.8</div>
+        <button class="btn btn-subscribe">S'abonner</button>
+        <button class="btn btn-rate">Apprécier</button>
+    </div>
+  </div>
+  </div>
+   <!-- Premier Événement -->
+   <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+    <div class="service-item">
+      <div class="overflow-hidden">
+        <img class="img-fluid custom-image-size" src="afric.jpg" alt="Événement 1">
+      </div>
+      <div class="p-4 text-center border border-5 border-light border-top-0">
+        <h4 class="mb-3">SIA 2023</h4>
+        <p>Date: 10 Février 2024</p>
+        <p>Lieu: Côte d'Ivoire</p>
+            <!-- Section des informations détaillées (cachée par défaut) -->
+     <div id="more-info-sia" style="display: none;">
+      <p>Heure: 18h00</p>
+      <p>Ville: Abidjan</p>
+      <p>Catégorie: Musique</p>
+      <p>Description: Une description détaillée de l'événement...</p>
+       </div>
+        <button class="btn btn-more-info" onclick="showMoreInfo('sia')">Voir plus</button>
+        <div class="rating">Note: 4.8</div>
+        <button class="btn btn-subscribe">S'abonner</button>
+        <button class="btn btn-rate">Apprécier</button>
+    </div>
+  </div>
+  </div>
+   <!-- Premier Événement -->
+   <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+    <div class="service-item">
+      <div class="overflow-hidden">
+        <img class="img-fluid custom-image-size" src="garba.jpg" alt="Événement 1">
+      </div>
+      <div class="p-4 text-center border border-5 border-light border-top-0">
+        <h4 class="mb-3">SIA 2023</h4>
+        <p>Date: 10 Février 2024</p>
+        <p>Lieu: Côte d'Ivoire</p>
+            <!-- Section des informations détaillées (cachée par défaut) -->
+     <div id="more-info-sia" style="display: none;">
+      <p>Heure: 18h00</p>
+      <p>Ville: Abidjan</p>
+      <p>Catégorie: Musique</p>
+      <p>Description: Une description détaillée de l'événement...</p>
+       </div>
+        <button class="btn btn-more-info" onclick="showMoreInfo('sia')">Voir plus</button>
+        <div class="rating">Note: 4.8</div>
+        <button class="btn btn-subscribe">S'abonner</button>
+        <button class="btn btn-rate">Apprécier</button>
+    </div>
+  </div>
+  </div>
+   <!-- Premier Événement -->
+   <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+    <div class="service-item">
+      <div class="overflow-hidden">
+        <img class="img-fluid custom-image-size" src="images.jpg" alt="Événement 1">
+      </div>
+      <div class="p-4 text-center border border-5 border-light border-top-0">
+        <h4 class="mb-3">SIA 2023</h4>
+        <p>Date: 10 Février 2024</p>
+        <p>Lieu: Côte d'Ivoire</p>
+            <!-- Section des informations détaillées (cachée par défaut) -->
+     <div id="more-info-sia" style="display: none;">
+      <p>Heure: 18h00</p>
+      <p>Ville: Abidjan</p>
+      <p>Catégorie: Musique</p>
+      <p>Description: Une description détaillée de l'événement...</p>
+       </div>
+        <button class="btn btn-more-info" onclick="showMoreInfo('sia')">Voir plus</button>
+        <div class="rating">Note: 4.8</div>
+        <button class="btn btn-subscribe">S'abonner</button>
+        <button class="btn btn-rate">Apprécier</button>
+    </div>
+  </div>
+  </div>
+   <!-- Premier Événement -->
+   <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+    <div class="service-item">
+      <div class="overflow-hidden">
+        <img class="img-fluid custom-image-size" src="img1.jpg" alt="Événement 1">
+      </div>
+      <div class="p-4 text-center border border-5 border-light border-top-0">
+        <h4 class="mb-3">SIA 2023</h4>
+        <p>Date: 10 Février 2024</p>
+        <p>Lieu: Côte d'Ivoire</p>
+            <!-- Section des informations détaillées (cachée par défaut) -->
+     <div id="more-info-sia" style="display: none;">
+      <p>Heure: 18h00</p>
+      <p>Ville: Abidjan</p>
+      <p>Catégorie: Musique</p>
+      <p>Description: Une description détaillée de l'événement...</p>
+       </div>
+        <button class="btn btn-more-info" onclick="showMoreInfo('sia')">Voir plus</button>
+        <div class="rating">Note: 4.8</div>
+        <button class="btn btn-subscribe">S'abonner</button>
+        <button class="btn btn-rate">Apprécier</button>
+    </div>
+  </div>
+  </div>
+   <!-- Premier Événement -->
+   <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+    <div class="service-item">
+      <div class="overflow-hidden">
+        <img class="img-fluid custom-image-size" src="img2.jpg" alt="Événement 1">
+      </div>
+      <div class="p-4 text-center border border-5 border-light border-top-0">
+        <h4 class="mb-3">SIA 2023</h4>
+        <p>Date: 10 Février 2024</p>
+        <p>Lieu: Côte d'Ivoire</p>
+            <!-- Section des informations détaillées (cachée par défaut) -->
+     <div id="more-info-sia" style="display: none;">
+      <p>Heure: 18h00</p>
+      <p>Ville: Abidjan</p>
+      <p>Catégorie: Musique</p>
+      <p>Description: Une description détaillée de l'événement...</p>
+       </div>
+        <button class="btn btn-more-info" onclick="showMoreInfo('sia')">Voir plus</button>
+        <div class="rating">Note: 4.8</div>
+        <button class="btn btn-subscribe">S'abonner</button>
+        <button class="btn btn-rate">Apprécier</button>
+    </div>
+  </div>
+  </div>
+   <!-- Premier Événement -->
+   <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+    <div class="service-item">
+      <div class="overflow-hidden">
+        <img class="img-fluid custom-image-size" src="img3.jpg" alt="Événement 1">
+      </div>
+      <div class="p-4 text-center border border-5 border-light border-top-0">
+        <h4 class="mb-3">SIA 2023</h4>
+        <p>Date: 10 Février 2024</p>
+        <p>Lieu: Côte d'Ivoire</p>
+            <!-- Section des informations détaillées (cachée par défaut) -->
+     <div id="more-info-sia" style="display: none;">
+      <p>Heure: 18h00</p>
+      <p>Ville: Abidjan</p>
+      <p>Catégorie: Musique</p>
+      <p>Description: Une description détaillée de l'événement...</p>
+       </div>
+        <button class="btn btn-more-info" onclick="showMoreInfo('sia')">Voir plus</button>
+        <div class="rating">Note: 4.8</div>
+        <button class="btn btn-subscribe">S'abonner</button>
+        <button class="btn btn-rate">Apprécier</button>
+    </div>
+  </div>
+  </div>
+   <!-- Premier Événement -->
+   <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+    <div class="service-item">
+      <div class="overflow-hidden">
+        <img class="img-fluid custom-image-size" src="img5.jpg" alt="Événement 1">
+      </div>
+      <div class="p-4 text-center border border-5 border-light border-top-0">
+        <h4 class="mb-3">SIA 2023</h4>
+        <p>Date: 10 Février 2024</p>
+        <p>Lieu: Côte d'Ivoire</p>
+            <!-- Section des informations détaillées (cachée par défaut) -->
+     <div id="more-info-sia" style="display: none;">
+      <p>Heure: 18h00</p>
+      <p>Ville: Abidjan</p>
+      <p>Catégorie: Musique</p>
+      <p>Description: Une description détaillée de l'événement...</p>
+       </div>
+        <button class="btn btn-more-info" onclick="showMoreInfo('sia')">Voir plus</button>
+        <div class="rating">Note: 4.8</div>
+        <button class="btn btn-subscribe">S'abonner</button>
+        <button class="btn btn-rate">Apprécier</button>
+    </div>
+  </div>
+  </div>
+   <!-- Premier Événement -->
+   <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+    <div class="service-item">
+      <div class="overflow-hidden">
+        <img class="img-fluid custom-image-size" src="img6.jpg" alt="Événement 1">
+      </div>
+      <div class="p-4 text-center border border-5 border-light border-top-0">
+        <h4 class="mb-3">SIA 2023</h4>
+        <p>Date: 10 Février 2024</p>
+        <p>Lieu: Côte d'Ivoire</p>
+            <!-- Section des informations détaillées (cachée par défaut) -->
+     <div id="more-info-sia" style="display: none;">
+      <p>Heure: 18h00</p>
+      <p>Ville: Abidjan</p>
+      <p>Catégorie: Musique</p>
+      <p>Description: Une description détaillée de l'événement...</p>
+       </div>
+        <button class="btn btn-more-info" onclick="showMoreInfo('sia')">Voir plus</button>
+        <div class="rating">Note: 4.8</div>
+        <button class="btn btn-subscribe">S'abonner</button>
+        <button class="btn btn-rate">Apprécier</button>
+    </div>
+  </div>
+  </div>
+   <!-- Premier Événement -->
+   <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+    <div class="service-item">
+      <div class="overflow-hidden">
+        <img class="img-fluid custom-image-size" src="img8.jpg" alt="Événement 1">
+      </div>
+      <div class="p-4 text-center border border-5 border-light border-top-0">
+        <h4 class="mb-3">SIA 2023</h4>
+        <p>Date: 10 Février 2024</p>
+        <p>Lieu: Côte d'Ivoire</p>
+            <!-- Section des informations détaillées (cachée par défaut) -->
+     <div id="more-info-sia" style="display: none;">
+      <p>Heure: 18h00</p>
+      <p>Ville: Abidjan</p>
+      <p>Catégorie: Musique</p>
+      <p>Description: Une description détaillée de l'événement...</p>
+       </div>
+        <button class="btn btn-more-info" onclick="showMoreInfo('sia')">Voir plus</button>
+        <div class="rating">Note: 4.8</div>
+        <button class="btn btn-subscribe">S'abonner</button>
+        <button class="btn btn-rate">Apprécier</button>
+    </div>
+  </div>
+  </div>
+   <!-- Premier Événement -->
+   <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+    <div class="service-item">
+      <div class="overflow-hidden">
+        <img class="img-fluid custom-image-size" src="img9.jpg" alt="Événement 1">
+      </div>
+      <div class="p-4 text-center border border-5 border-light border-top-0">
+        <h4 class="mb-3">SIA 2023</h4>
+        <p>Date: 10 Février 2024</p>
+        <p>Lieu: Côte d'Ivoire</p>
+            <!-- Section des informations détaillées (cachée par défaut) -->
+     <div id="more-info-sia" style="display: none;">
+      <p>Heure: 18h00</p>
+      <p>Ville: Abidjan</p>
+      <p>Catégorie: Musique</p>
+      <p>Description: Une description détaillée de l'événement...</p>
+       </div>
+        <button class="btn btn-more-info" onclick="showMoreInfo('sia')">Voir plus</button>
+        <div class="rating">Note: 4.8</div>
+        <button class="btn btn-subscribe">S'abonner</button>
+        <button class="btn btn-rate">Apprécier</button>
+    </div>
+  </div>
+  </div>
+   <!-- Premier Événement -->
+   <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+    <div class="service-item">
+      <div class="overflow-hidden">
+        <img class="img-fluid custom-image-size" src="img11.jpg" alt="Événement 1">
+      </div>
+      <div class="p-4 text-center border border-5 border-light border-top-0">
+        <h4 class="mb-3">SIA 2023</h4>
+        <p>Date: 10 Février 2024</p>
+        <p>Lieu: Côte d'Ivoire</p>
+            <!-- Section des informations détaillées (cachée par défaut) -->
+     <div id="more-info-sia" style="display: none;">
+      <p>Heure: 18h00</p>
+      <p>Ville: Abidjan</p>
+      <p>Catégorie: Musique</p>
+      <p>Description: Une description détaillée de l'événement...</p>
+       </div>
+        <button class="btn btn-more-info" onclick="showMoreInfo('sia')">Voir plus</button>
+        <div class="rating">Note: 4.8</div>
+        <button class="btn btn-subscribe">S'abonner</button>
+        <button class="btn btn-rate">Apprécier</button>
+    </div>
+  </div>
+  </div>
+        <!-- Ajoutez d'autres événements selon vos besoins -->
+      </div>
+    </div>
+  </section>
+  <footer class="footer-distributed">
+
+    <div class="footer-left">
+  
+      <a ><span class="red-text1">Faso</span><span class="yellow-text1">Evenement</span><span class="green-text1">.bf</span></a>
+      <p class="footer-links">
+        <a href="#" class="link-1">Acceiul</a>
+        
+        <a href="#">Blog</a>
+      
+        <a href="#">Pricing</a>
+      
+        <a href="#">A propos</a>
+        
+        <a href="#">Faq</a>
+        
+        <a href="#">Contact</a>
+      </p>
+  
+      <p class="footer-company-name">FasoEvenement.bf © 2015</p>
+    </div>
+  
+    <div class="footer-center">
+  
+      <div>
+        <i class="fa fa-map-marker"></i>
+        <p><span>Ouagadougou</span> Koudougou</p>
+      </div>
+  
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+226 67657042</p>
+      </div>
+  
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:support@company.com">fasoevenement@gmail.bf</a></p>
+      </div>
+  
+    </div>
+  
+    <div class="footer-right">
+  
+      <p class="footer-company-about">
+        <span>A propos de FasoEvenement</span>
+        Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+      </p>
+  
+      <div class="footer-icons">
+  
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-github"></i></a>
+  
+      </div>
+  
+    </div>
+  
+  </footer>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,870 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr-fr" lang="fr-fr" dir=""><head>
+    <script type="text/javascript">var _starttime = new Date().getTime();</script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="robots" content="index,follow">
+<link rel="shortcut icon" href="http://miageprojet2.unice.fr/favicon.ico">
+<meta name="generator" content="MindTouch Deki 8.08">
+<link rel="search" type="application/opensearchdescription+xml" title="recherche miageprojet2" href="http://miageprojet2.unice.fr/@gui/opensearch/description">    <title>TP Applications web : utilisation d'une base de données - miageprojet2</title>
+    
+    <!-- default css -->
+    <link rel="stylesheet" type="text/css" media="screen" href="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/css.css"> <!--[if IE 7]><style type="text/css">@import "/skins/common/_ie7.css";</style><![endif]--><!--[if IE 6]><style type="text/css">@import "/skins/common/_ie.css";</style><![endif]-->    <link rel="stylesheet" type="text/css" media="print" href="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/print.css"><link rel="stylesheet" type="text/css" media="print" href="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/prince.content.css">        
+    <!-- specific screen stylesheets-->
+        <link rel="stylesheet" type="text/css" media="screen" href="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/css_002.css">
+        
+    <!-- specific print stylesheets -->
+    <link rel="stylesheet" type="text/css" media="print" href="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/_print.css">
+    <link rel="stylesheet" type="text/css" media="print" href="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/_content.css">
+   
+    <!-- IE6 & IE7 specific stuff -->
+    <!--[if IE]><meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+        <!--[if IE 7]>
+        <style type="text/css">@import "/skins/ace/mindtouch/_ie7.css";</style>
+    <![endif]-->
+    <!--[if IE 6]>
+        <style type="text/css">@import "/skins/ace/mindtouch/_ie.css";</style>
+    <![endif]-->
+    
+    <!-- default scripting -->
+    
+    <!--[if IE 6]><style type="text/css">* html .ttshadow div.tt_content { background: none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/skins/ace/mindtouch/tt-body.png',sizingMethod='scale'); }* html .dmenu div.dmenu-body_m { background: none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/skins/ace/mindtouch/mt-body-m.png',sizingMethod='scale'); }* html .dmenu div.dmenu-body { background: none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/skins/ace/mindtouch/mt-body-s.png',sizingMethod='scale'); }* html .inlinedialogue td.id-bottom { background: none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/skins/ace/mindtouch/il-bbody.png',sizingMethod='scale'); }* html .ttshadow div.tt_top { background: none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/skins/ace/mindtouch/tt-top-n.png',sizingMethod='scale'); }* html .ttshadow div.tt_bottom {  background: none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/skins/ace/mindtouch/tt-bottom.png',sizingMethod='crop');  }* html .dmenu div.dmenu-top_m {  background: none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/skins/ace/mindtouch/mt-top-m.png',sizingMethod='crop');  }* html .dmenu div.dmenu-bottom_m {  background: none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/skins/ace/mindtouch/mt-bottom-m.png',sizingMethod='crop');  }* html .dmenu div.dmenu-top {  background: none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/skins/ace/mindtouch/mt-top-s.png',sizingMethod='crop');  }* html .inlinedialogue div.id-botl {  background: none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/skins/ace/mindtouch/il-bl.png',sizingMethod='crop');  }* html .inlinedialogue div.id-botr {  background: none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/skins/ace/mindtouch/il-br.png',sizingMethod='crop');  }* html .dmenu div.dmenu-bottom {  background: none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/skins/ace/mindtouch/mt-bottom-s.png',sizingMethod='crop');  }</style><![endif]-->        
+    <script type="text/javascript" src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/js.php"></script>    
+    <script type="text/javascript">
+    	var _cur_TZ = '';
+	            var image0 = new Image();
+	            image0.src = '/skins/ace/mindtouch/mt-top-s.png';
+	        	            var image1 = new Image();
+	            image1.src = '/skins/ace/mindtouch/mt-body-s.png';
+	        	            var image2 = new Image();
+	            image2.src = '/skins/ace/mindtouch/mt-bottom-s.png';
+	        	            var image3 = new Image();
+	            image3.src = '/skins/ace/mindtouch/mt-top-m.png';
+	        	            var image4 = new Image();
+	            image4.src = '/skins/ace/mindtouch/mt-body-m.png';
+	        	            var image5 = new Image();
+	            image5.src = '/skins/ace/mindtouch/mt-bottom-m.png';
+	        	            var image6 = new Image();
+	            image6.src = '/skins/ace/mindtouch/tt-top-l.png';
+	        	            var image7 = new Image();
+	            image7.src = '/skins/ace/mindtouch/tt-top-n.png';
+	        	            var image8 = new Image();
+	            image8.src = '/skins/ace/mindtouch/tt-top-r.png';
+	        	            var image9 = new Image();
+	            image9.src = '/skins/ace/mindtouch/tt-body.png';
+	        	            var image10 = new Image();
+	            image10.src = '/skins/ace/mindtouch/tt-bottom.png';
+	            </script>
+    
+    	<script type="text/javascript">
+
+	    _page_redirect = false;
+_path_tpl = '/skins/ace';
+_path_skin = '/skins/ace/mindtouch';
+_path_common = '/skins/common';
+_path_icons = '/skins/common/icons';
+editToken = 'a7d96033a913811af5611782489142b1';
+_userName = 'Anonymous';
+_userId = '2';
+var _editor_styles_path = ['/skins/ace/_editor.css', '/skins/ace/mindtouch/_content.css', ''];
+_today = '30 Jan 2024';
+baseHref = 'http://miageprojet2.unice.fr';
+_page_titlePath = 'Master MIAGE 1/Applications Web';
+_page_titleName = 'TP7 Applications web : utilisation d\'une base de données';
+_page_ID = 982;
+_total_images = 6;
+contextTopic = 'Master MIAGE 1/Applications Web/TP7 Applications web : utilisation d\'une base de données';
+_over_storage_quota = false;
+saveFlag = false;
+
+	    
+		// remote scripting library
+		// (c) copyright 2005 modernmethod, inc
+		var sajax_debug_mode = false;
+		var sajax_request_type = "POST";
+
+		function sajax_debug(text) {
+			if (sajax_debug_mode)
+				alert("RSD: " + text);
+		};
+
+		function sajax_init_object() {
+			sajax_debug("sajax_init_object() called..");
+
+			var A = window.XMLHttpRequest ? new XMLHttpRequest() : window.ActiveXObject ? new ActiveXObject("Microsoft.XMLHTTP") : null;
+			if (!A)
+				sajax_debug("Could not create connection object.");
+			return A;
+		};
+		function _sajax_do_call(x, func_name, args) {
+			var i, x, n;
+			var uri;
+			var post_data;
+
+			uri = "/index.php";
+			if (sajax_request_type == "GET") {
+				if (uri.indexOf("?") == -1) 
+					uri = uri + "?rs=" + encodeURIComponent(func_name);
+				else
+					uri = uri + "&rs=" + encodeURIComponent(func_name);
+				for (i = 0; i < args.length-1; i++) {
+				    var a = args[i];
+					uri = uri + "&rsargs[]=" + encodeURIComponent(a);
+				}
+				uri = uri + "&rsrnd=" + new Date().getTime();
+				post_data = null;
+			} else {
+				post_data = "rs=" + func_name;
+				for (i = 0; i < args.length-1; i++) {
+				    var a = args[i];
+					post_data = post_data + "&rsargs[]=" + encodeURIComponent(a);
+				}
+			}
+			x.open(sajax_request_type, uri, true);
+			if (sajax_request_type == "POST") {
+				x.setRequestHeader("Method", "POST " + uri + " HTTP/1.1");
+				x.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+			}
+			x.onreadystatechange = function() {
+				if (x.readyState != 4) 
+					return;
+				if (typeof sajax_debug != 'undefined') sajax_debug("received " + x.responseText);
+
+				var status;
+				var data = x.responseText.replace(/^\s+/, '');
+				status = data.charAt(0);
+				data = data.substring(2);
+				if (status == "-") 
+					alert("Error: " + data);
+				else  
+					args[args.length-1](data);
+			}
+			x.send(post_data);
+			sajax_debug(func_name + " uri = " + uri + "/post = " + post_data);
+			sajax_debug(func_name + " waiting..");
+			return x;
+		};
+		function sajax_do_call(func_name, args) {
+			x = sajax_init_object();
+			_sajax_do_call(x, func_name, args);
+			delete x;
+		};
+
+		function x_breadcrumbSet() { sajax_do_call("breadcrumbSet", x_breadcrumbSet.arguments); };
+		function x_wfAdminUserForm() { sajax_do_call("wfAdminUserForm", x_wfAdminUserForm.arguments); };
+		function x_wfSetUserOption() { sajax_do_call("wfSetUserOption", x_wfSetUserOption.arguments); };
+		function x_wfSetRestrictions() { sajax_do_call("wfSetRestrictions", x_wfSetRestrictions.arguments); };
+		function x_setUserOption() { sajax_do_call("setUserOption", x_setUserOption.arguments); };
+		function x_wfValidateUserOrGroup() { sajax_do_call("wfValidateUserOrGroup", x_wfValidateUserOrGroup.arguments); };
+		function x_wfSaveEdit() { sajax_do_call("wfSaveEdit", x_wfSaveEdit.arguments); };
+		function x_wfQueryLinks() { sajax_do_call("wfQueryLinks", x_wfQueryLinks.arguments); };
+		function x_loadInplaceEditor() { sajax_do_call("loadInplaceEditor", x_loadInplaceEditor.arguments); };
+		function x_doSetbaseHref() { sajax_do_call("doSetbaseHref", x_doSetbaseHref.arguments); };
+		function x_showFileAttachments() { sajax_do_call("showFileAttachments", x_showFileAttachments.arguments); };
+		function x_doSectionEdit() { sajax_do_call("doSectionEdit", x_doSectionEdit.arguments); };
+		function x_postComment() { sajax_do_call("postComment", x_postComment.arguments); };
+		function x_getComments() { sajax_do_call("getComments", x_getComments.arguments); };
+		function x_deleteComment() { sajax_do_call("deleteComment", x_deleteComment.arguments); };
+		function x_editComment() { sajax_do_call("editComment", x_editComment.arguments); };
+		function x_wfEmailPage() { sajax_do_call("wfEmailPage", x_wfEmailPage.arguments); };
+		function x_wfCheckNewTitle() { sajax_do_call("wfCheckNewTitle", x_wfCheckNewTitle.arguments); };
+		function x_wfDeleteFile() { sajax_do_call("wfDeleteFile", x_wfDeleteFile.arguments); };
+		function x_wfSetPageProperties() { sajax_do_call("wfSetPageProperties", x_wfSetPageProperties.arguments); };
+		function x_wfDeleteTopic() { sajax_do_call("wfDeleteTopic", x_wfDeleteTopic.arguments); };
+		function x_wfRenameTopic() { sajax_do_call("wfRenameTopic", x_wfRenameTopic.arguments); };
+		function x_wfMoveAttachments() { sajax_do_call("wfMoveAttachments", x_wfMoveAttachments.arguments); };
+		function x_wfGetAttachmentUrl() { sajax_do_call("wfGetAttachmentUrl", x_wfGetAttachmentUrl.arguments); };
+		function x_wfInlineImageGallery() { sajax_do_call("wfInlineImageGallery", x_wfInlineImageGallery.arguments); };
+		function x_wfSetFileDescription() { sajax_do_call("wfSetFileDescription", x_wfSetFileDescription.arguments); };
+		function x_wfChangeLoginView() { sajax_do_call("wfChangeLoginView", x_wfChangeLoginView.arguments); };
+		function x_wfChangeLoginViewToCreate() { sajax_do_call("wfChangeLoginViewToCreate", x_wfChangeLoginViewToCreate.arguments); };
+		function x_wfSaveCredsToSession() { sajax_do_call("wfSaveCredsToSession", x_wfSaveCredsToSession.arguments); };
+		function x_wfChangeAddServiceView() { sajax_do_call("wfChangeAddServiceView", x_wfChangeAddServiceView.arguments); };
+		function x_wfSaveLoginPageCreds() { sajax_do_call("wfSaveLoginPageCreds", x_wfSaveLoginPageCreds.arguments); };
+		function x_wfRemindPassword() { sajax_do_call("wfRemindPassword", x_wfRemindPassword.arguments); };
+		function x_wfChangeAvailUsersPage() { sajax_do_call("wfChangeAvailUsersPage", x_wfChangeAvailUsersPage.arguments); };
+		
+	    window.onbeforeunload = checkForChanges;
+
+	    function checkForChanges() {
+	        if (saveFlag && !doCheckChanges(cur_editor)) {
+	        	return "Vous avez modifié le contenu sans sauver vos changements. Etes-vous sûr de vouloir quitter cette page?";
+	        }
+	    }
+	    var aLt = new Array();aLt["attach-no-description"] = 'Aucune description'; aLt["cancel"] = 'Annuler'; aLt["comment-delete"] = 'Etes-vous sûr de vouloir supprimer ce commentaire?'; aLt["gallery-close"] = 'fermer'; aLt["gallery-next"] = 'suivant'; aLt["gallery-prev"] = 'précédent'; aLt["internal-error"] = 'Désolé, mais il y a eu un problème interne - veuillez réessayer.'; aLt["js-label_cancel"] = 'Annuler'; aLt["js-label_save"] = 'Sauver'; aLt["js-tooltip_cancel"] = 'Sortir sans sauver les changements'; aLt["js-tooltip_save"] = 'Sauver et Quitter (Alt+S)'; aLt["ldap-provide-credentials"] = 'Veuillez fournir les indications de connexion au service externe.'; aLt["loading"] = 'Chargement...'; aLt["menu-confirm-delete"] = 'Etes-vous sûr de vouloir supprimer ce fichier?'; aLt["menu-delete-file"] = 'Supprimer'; aLt["menu-edit-description"] = 'Modifier la description'; aLt["menu-move-file"] = 'Déplacer'; aLt["menu-previous-versions"] = 'Versions précédentes'; aLt["menu-view-original"] = 'Voir l\'original'; aLt["print-end-notes"] = 'Notes de bas de page'; aLt["ready"] = 'Prêt'; aLt["submit"] = 'Envoyer'; aLt["select-files"] = 'Sélection fichiers...'; aLt["wikibits-attach-another"] = 'Attacher un autre fichier'; aLt["wikibits-attach-file"] = 'Attacher un fichier'; aLt["wikibits-cant-attach-editing"] = 'Désolé, vous ne pouvez attacher un fichier pendant la modification d\'une page. Veuillez fermer l\'éditeur auparavant.'; aLt["wikibits-edit-section"] = 'Modifier la section'; aLt["wikibits-remove-file"] = 'Supprimer le fichier';  var wfMsg = function (key) { return aLt[key] ? aLt[key] : 'MISSING: ' + key; };var navMaxWidth = 1600;
+	//hook in menu clicking events to the document's body
+	YAHOO.util.Event.addListener(document, "click", function () { FileMenu.bodyClick(); DWMenu.BodyClick(); });	
+	YAHOO.util.Event.onDOMReady(function () { new clientWindow }); 
+	
+                
+		YAHOO.util.Event.onAvailable("siteNavTree", DekiWiki.nav.init, DekiWiki.nav, true);
+		
+	
+			YAHOO.util.Event.onDOMReady(function() {
+			tb_init('a.lightbox, area.lightbox, input.lightbox, a[@rel=awesomebox]');//pass where to apply thickbox
+			imgLoader = new Image();// preload image
+			imgLoader.src = tb_pathToImage;
+		});
+		
+		YAHOO.util.Event.onDOMReady(function() { 
+			MTComments.HookBehavior();
+		});
+		</script>
+	
+	<!-- styles overwritten via control panel - load this css last -->
+	<link type="text/css" rel="stylesheet" href="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/SyntaxHighlighter.css"><script type="text/javascript" src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/shCore.js"></script><script type="text/javascript" src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/shBrushJava.js"></script><script type="text/javascript" src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/shBrushXml.js"></script> 
+	
+<style type="text/css">.dp-j .annotation { color: #646464; }.dp-j .number { color: #C00000; }</style><style type="text/css">.dp-j .annotation { color: #646464; }.dp-j .number { color: #C00000; }</style><style type="text/css">.dp-j .annotation { color: #646464; }.dp-j .number { color: #C00000; }</style><style type="text/css">.dp-j .annotation { color: #646464; }.dp-j .number { color: #C00000; }</style><style type="text/css">.dp-j .annotation { color: #646464; }.dp-j .number { color: #C00000; }</style><style type="text/css">.dp-xml .cdata { color: #ff1493; }.dp-xml .tag, .dp-xml .tag-name { color: #069; font-weight: bold; }.dp-xml .attribute { color: red; }.dp-xml .attribute-value { color: blue; }</style></head>
+
+<body class="">
+<noscript><div class="noscript">Cette application nécessite l'activation de Javascript. <a href="http://help.mindtouch.com/Deki_FAQ#Browser_Support">Apprenez comment activer Javascript dans votre navigateur.</a></div></noscript>
+<div class="wrap global PageDW-MasterMIAGE1ApplicationsWebTP7Applicationswebutilisationdunebasededonnes" id="wrap"> 
+	<div class="custom"></div>
+ 	<div class="w_top_logo">
+ 		<table cellspacing="0" cellpadding="0" border="0" class="columnTable">
+ 			<tbody><tr>
+ 				<td valign="top" style="width:100%;"><div class="customer-logo"><a href="http://miageprojet2.unice.fr/" title="miageprojet2"><img src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/logo.png" alt="miageprojet2" title="miageprojet2"></a></div></td>
+ 				<td valign="bottom"><div class="loggedin"><img src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/icon-sharkfin.gif" alt="">
+		 			<span class="loggedintext">
+			 		 
+		 			<span class="loggedinwho">Vous n'êtes pas connecté.</span>&nbsp;&nbsp; <a href="http://miageprojet2.unice.fr/index.php?title=Special:Userlogin&amp;returntotitle=Master+MIAGE+1%2FApplications+Web%2FTP7+Applications+web+%3A+utilisation+d%27une+base+de+donn%C3%A9es">Connexion</a>					</span></div>
+				</td>
+			</tr>
+		</tbody></table>
+	</div>
+ 	<div class="w_top">
+		<div class="w_top"><ul class="options">		<li><a href="http://miageprojet2.unice.fr/index.php?title=Special:Userlogin&amp;returntomypage=y" class="item">Ma Page</a></li>		<li><a href="http://miageprojet2.unice.fr/Special:Recentchanges" class="item">Changements Récents</a></li>		<li><a href="http://miageprojet2.unice.fr/index.php?title=Master_MIAGE_1/Applications_Web/TP7_Applications_web_:_utilisation_d%27une_base_de_donn%C3%A9es" class="menuArrow" onclick="return menuPosition('menuInfo', this, 0, 5);">Outils</a></li>		<li><a href="http://wiki.developer.mindtouch.com/" class="item">Aide</a></li></ul></div>	</div>
+	
+ 	<div class="w_body">
+	 	<table width="100%" cellspacing="0" cellpadding="0" class="columnTable">
+	 		<tbody><tr>
+	 			<td class="left" valign="top">
+					<div class="w_left">
+						<div class="content">
+							<div class="breadcrumbs"><h5>Pages récentes</h5><div id="breadcrumb"><span class="selected"><a href="http://miageprojet2.unice.fr/index.php?title=Master_MIAGE_1/Applications_Web/TP7_Applications_web_:_utilisation_d%27une_base_de_donn%C3%A9es&amp;bc=0" title="Master MIAGE 1/Applications Web/TP7 Applications web : utilisation d'une base de données">TP7 Applications web : ...</a></span><br><span class="none">&nbsp;</span><br><span class="none">&nbsp;</span><br><span class="none">&nbsp;</span><br><span class="none">&nbsp;</span></div></div>
+					 		<fieldset class="search">
+						 		<form action="/Special:Search" id="searchform">
+							         <input id="searchInput" class="searchText" name="search" type="text" accesskey="f">
+							          <input type="hidden" name="type" value="fulltext">
+							          <input type="submit" name="go" class="searchButton" id="searchGoButton" value="Trouver">
+								</form>
+							</fieldset>
+						  <div id="siteNavTree"><div class="node dockedNode homeNode parentClosed" id="n34" c="n79" path=""><a href="http://miageprojet2.unice.fr/" title="Accueil"><span>Accueil</span></a></div><div class="node dockedNode parentClosed" id="n79" c="n238" p="n34" path="Master_MIAGE_1/" cd="n238" sd="0"><a href="http://miageprojet2.unice.fr/Master_MIAGE_1" title="Master 1"><span>Master 1</span></a></div><div class="node dockedNode lastDocked parentClosed" id="n238" c="n978,n274,n1079,n974,n983,n982" p="n79" path="Master_MIAGE_1/Applications_Web/" sd="0"><a href="http://miageprojet2.unice.fr/Master_MIAGE_1/Applications_Web" title="Applications Web"><span>Applications Web</span></a></div><div class="node childNode sibling" id="n978" p="n238" path="Master_MIAGE_1/Applications_Web/Etude_d'un_vrai_projet,_templating_avec_JSP/"><a href="http://miageprojet2.unice.fr/Master_MIAGE_1/Applications_Web/Etude_d'un_vrai_projet%2c_templating_avec_JSP" title="TP4 : templating JSP, Ajax, javascript"><span>TP4 : templating JS...</span></a></div><div class="node childNode sibling" id="n274" p="n238" path="Master_MIAGE_1/Applications_Web/Mini_Projets_-_Applications_Web_-_M1_MIAGE_2008%2f2009/"><a href="http://miageprojet2.unice.fr/Master_MIAGE_1/Applications_Web/Mini_Projets_-_Applications_Web_-_M1_MIAGE_2008%2f%2f2009" title="Mini Projets"><span>Mini Projets</span></a></div><div class="node childNode sibling" id="n1079" p="n238" path="Master_MIAGE_1/Applications_Web/TP1_Applications_web_M1_Miage_2010-2011_:_étude_du_protocole_HTTP/"><a href="http://miageprojet2.unice.fr/Master_MIAGE_1/Applications_Web/TP1_Applications_web_M1_Miage_2010-2011_%3a_%c3%a9tude_du_protocole_HTTP" title="TP1 Applications web M1 Miage 2011-2012 : étude du protocole HTTP"><span>TP1 Applications we...</span></a></div><div class="node childNode sibling" id="n974" p="n238" path="Master_MIAGE_1/Applications_Web/TP3_:_Jsp_%2f_JSTL_%2f_EL_%2f_Servlets_et_architecture_en_couches/"><a href="http://miageprojet2.unice.fr/Master_MIAGE_1/Applications_Web/TP3_%3a_Jsp_%2f%2f_JSTL_%2f%2f_EL_%2f%2f_Servlets_et_architecture_en_couches" title="TP3 : Jsp / JSTL / EL / Servlets et architecture en couches"><span>TP3 : Jsp / JSTL / E...</span></a></div><div class="node childNode sibling" id="n983" p="n238" path="Master_MIAGE_1/Applications_Web/TP7_:_gestion_des_relations,_début_du_mini_projet/"><a href="http://miageprojet2.unice.fr/Master_MIAGE_1/Applications_Web/TP7_%3a_gestion_des_relations%2c_d%c3%a9but_du_mini_projet" title="TP8 : gestion des relations, début du mini projet"><span>TP8 : gestion des re...</span></a></div><div class="node childNode sibling selected" id="n982" p="n238" path="Master_MIAGE_1/Applications_Web/TP7_Applications_web_:_utilisation_d'une_base_de_données/"><a href="http://miageprojet2.unice.fr/Master_MIAGE_1/Applications_Web/TP7_Applications_web_%3a_utilisation_d'une_base_de_donn%c3%a9es" title="TP Applications web : utilisation d'une base de données"><span>TP Applications web...</span></a></div></div>						</div>
+					</div>
+	 				<div><img src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/icon-trans.gif" width="185" height="1" alt=""></div>
+				</td>
+				<td valign="top" class="right">
+			
+		<div class="w_content" id="content">
+			<div class="pagebar">
+				<div class="pagebar_options">
+					<div class="pbar_options"><a href="#" class="disabled" onclick="return false"><span class="icon"><img src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/icon-trans.gif" class="edit-disabled" alt=""></span><br><span class="text">Modifier<br>la page</span></a></div><div class="pbar_options"><a href="#" class="disabled"><span class="icon"><img src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/icon-trans.gif" class="addSubpage-disabled" alt=""></span><br><span class="text">Nouvelle<br>page</span></a></div><div class="pbar_options"><a href="http://miageprojet2.unice.fr/index.php?title=Master_MIAGE_1/Applications_Web/TP7_Applications_web_:_utilisation_d%27une_base_de_donn%C3%A9es&amp;action=print" class="" onclick="menuOff('pageMenuContent');return Print.open('/index.php?title=Master_MIAGE_1/Applications_Web/TP7_Applications_web_:_utilisation_d%27une_base_de_donn%C3%A9es&amp;action=print');"><span class="icon"><img src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/icon-trans.gif" class="print" alt=""></span><br><span class="text">Imprimer<br>la page</span></a></div>					<div id="pageMenu"><a href="http://miageprojet2.unice.fr/index.php?title=Master_MIAGE_1/Applications_Web/TP7_Applications_web_:_utilisation_d%27une_base_de_donn%C3%A9es" class="pbar_link" onclick="return menuPosition('pageMenuContent', this, 0, -23);"><span class="downarrow">Plus</span></a></div>				</div>
+				
+				<div class="pagebar_items">
+					<div class="pagebar_items_left"></div>
+					<div class="pagebar_items_body">
+						<div class="modified">Page modifiée à <a href="http://miageprojet2.unice.fr/index.php?title=Master_MIAGE_1/Applications_Web/TP7_Applications_web_:_utilisation_d%27une_base_de_donn%C3%A9es&amp;action=history" title="07:39, 21 Mar 2012">07:39, 21 Mar 2012</a> par <a href="http://miageprojet2.unice.fr/User:MichelBuffa" class="link-user" rel="internal">MichelBuffa</a></div>
+						<div class="pagebar_items_2">		
+							<div class="pbar_soptions"><a href="#attachForm"><span class="icon"><img src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/icon-trans.gif" class="folder" alt=""></span><span class="text" id="pageFilesCount">3</span></a></div>							<div class="pbar_soptions"><a href="#" onclick="return DWMenu.Position('menuPageContent', this, -2, 0)"><span class="icon"><img src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/icon-trans.gif" class="toc" alt=""></span><span class="icon"><img src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/icon-trans.gif" class="menuarrow" alt=""></span></a></div>							<div class="pbar_soptions"><a href="#" onclick="return menuPosition('menuBacklink', this, -2, 0, true);"><span class="icon"><img src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/icon-trans.gif" class="referring" alt=""></span><span class="icon"><img src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/icon-trans.gif" class="menuarrow" alt=""></span></a></div>						
+							<div class="pbar_soptions"><a href="#"><span class="icon"><img src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/icon-trans.gif" class="restrict" alt=""></span></a></div>																				</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		 		<div id="pageContent">
+ 			<div id="topic">
+ 			
+	 				 				<div class="hierarchy">
+	 					<span class="dw-hierarchy"><a href="http://miageprojet2.unice.fr/">Accueil</a> &gt; <a href="http://miageprojet2.unice.fr/Master_MIAGE_1">Master 1</a> &gt; <a href="http://miageprojet2.unice.fr/Master_MIAGE_1/Applications_Web">Applications Web</a> &gt; TP Applications web : utilisation d'une base de données</span>	 				</div>
+	 				 			
+		 						<div class="t-title">
+					<h1 id="title">TP Applications web : utilisation d'une base de données</h1>
+				</div>
+					 		
+		 		<div class="t-body" id="topic-body">
+		 				 			
+		 			<div><a name="a-title"></a></div>		 		
+				    <h3 id="siteSub">De $1</h3>
+		 					 				 				
+		 			
+		 			<div class="b-body">
+		 			
+		 				<div id="page-top"><div id="pageToc"><div class="pageToc"><h5>Table des matières</h5><ol style="list-style-type:none; margin-left:0px; padding-left:0px;"><li><span>1.</span> <a href="http://miageprojet2.unice.fr/Master_MIAGE_1/Applications_Web/TP7_Applications_web_%3a_utilisation_d'une_base_de_donn%c3%a9es#Introduction" rel="internal">Introduction</a></li><li><span>2.</span> <a href="http://miageprojet2.unice.fr/Master_MIAGE_1/Applications_Web/TP7_Applications_web_%3a_utilisation_d'une_base_de_donn%c3%a9es#Cr.c3.a9ation_d'un_projet" rel="internal">Création d'un projet</a></li><li><span>3.</span> <a href="http://miageprojet2.unice.fr/Master_MIAGE_1/Applications_Web/TP7_Applications_web_%3a_utilisation_d'une_base_de_donn%c3%a9es#Cr.c3.a9ation_d'une_base_de_donn.c3.a9es_vide" rel="internal">Création d'une base de données vide</a></li><li><span>4.</span> <a href="http://miageprojet2.unice.fr/Master_MIAGE_1/Applications_Web/TP7_Applications_web_%3a_utilisation_d'une_base_de_donn%c3%a9es#Cr.c3.a9ation_d'un_mod.c3.a8le_(classe_entit.c3.a9)_d'Utilisateur_et_d'un_gestionnaire_de_persistence" rel="internal">Création d'un modèle (classe entité) d'Utilisateur et d'un gestionnaire de persistence</a></li><li><span>5.</span> <a href="http://miageprojet2.unice.fr/Master_MIAGE_1/Applications_Web/TP7_Applications_web_%3a_utilisation_d'une_base_de_donn%c3%a9es#Compl.c3.a9tons_la_classe_entit.c3.a9_avec_des_constructeurs.2c_des_accesseurs.2c_des_modifieurs" rel="internal">Complétons la classe entité avec des constructeurs, des accesseurs, des modifieurs</a></li><li><span>6.</span> <a href="http://miageprojet2.unice.fr/Master_MIAGE_1/Applications_Web/TP7_Applications_web_%3a_utilisation_d'une_base_de_donn%c3%a9es#Ajout_d'un_gestionnaire_d'utilisateurs" rel="internal">Ajout d'un gestionnaire d'utilisateurs</a></li><li><span>7.</span> <a href="http://miageprojet2.unice.fr/Master_MIAGE_1/Applications_Web/TP7_Applications_web_%3a_utilisation_d'une_base_de_donn%c3%a9es#Ecriture_d'une_Servlet_.2f_contr.c3.b4leur_web" rel="internal">Ecriture d'une Servlet / contrôleur web</a></li><li><span>8.</span> <a href="http://miageprojet2.unice.fr/Master_MIAGE_1/Applications_Web/TP7_Applications_web_%3a_utilisation_d'une_base_de_donn%c3%a9es#Modification_de_index.jsp_en_front-end" rel="internal">Modification de index.jsp en front-end</a></li><li><span>9.</span> <a href="http://miageprojet2.unice.fr/Master_MIAGE_1/Applications_Web/TP7_Applications_web_%3a_utilisation_d'une_base_de_donn%c3%a9es#Executez_le_projet_!" rel="internal">Executez le projet !</a></li><li><span>10.</span> <a href="http://miageprojet2.unice.fr/Master_MIAGE_1/Applications_Web/TP7_Applications_web_%3a_utilisation_d'une_base_de_donn%c3%a9es#Travail_.c3.a0_rendre_pour_dans_15_jours" rel="internal">Travail à rendre pour dans 15 jours</a></li></ol></div></div><div class="pageText" id="pageText">
+<p></p><div class="wiki-toc"><ol style="list-style-type:none; margin-left:0px; padding-left:0px;"><li><span>1.</span> <a href="http://miageprojet2.unice.fr/Master_MIAGE_1/Applications_Web/TP7_Applications_web_%3a_utilisation_d'une_base_de_donn%c3%a9es#Introduction" rel="internal">Introduction</a></li><li><span>2.</span> <a href="http://miageprojet2.unice.fr/Master_MIAGE_1/Applications_Web/TP7_Applications_web_%3a_utilisation_d'une_base_de_donn%c3%a9es#Cr.c3.a9ation_d'un_projet" rel="internal">Création d'un projet</a></li><li><span>3.</span> <a href="http://miageprojet2.unice.fr/Master_MIAGE_1/Applications_Web/TP7_Applications_web_%3a_utilisation_d'une_base_de_donn%c3%a9es#Cr.c3.a9ation_d'une_base_de_donn.c3.a9es_vide" rel="internal">Création d'une base de données vide</a></li><li><span>4.</span> <a href="http://miageprojet2.unice.fr/Master_MIAGE_1/Applications_Web/TP7_Applications_web_%3a_utilisation_d'une_base_de_donn%c3%a9es#Cr.c3.a9ation_d'un_mod.c3.a8le_(classe_entit.c3.a9)_d'Utilisateur_et_d'un_gestionnaire_de_persistence" rel="internal">Création d'un modèle (classe entité) d'Utilisateur et d'un gestionnaire de persistence</a></li><li><span>5.</span> <a href="http://miageprojet2.unice.fr/Master_MIAGE_1/Applications_Web/TP7_Applications_web_%3a_utilisation_d'une_base_de_donn%c3%a9es#Compl.c3.a9tons_la_classe_entit.c3.a9_avec_des_constructeurs.2c_des_accesseurs.2c_des_modifieurs" rel="internal">Complétons la classe entité avec des constructeurs, des accesseurs, des modifieurs</a></li><li><span>6.</span> <a href="http://miageprojet2.unice.fr/Master_MIAGE_1/Applications_Web/TP7_Applications_web_%3a_utilisation_d'une_base_de_donn%c3%a9es#Ajout_d'un_gestionnaire_d'utilisateurs" rel="internal">Ajout d'un gestionnaire d'utilisateurs</a></li><li><span>7.</span> <a href="http://miageprojet2.unice.fr/Master_MIAGE_1/Applications_Web/TP7_Applications_web_%3a_utilisation_d'une_base_de_donn%c3%a9es#Ecriture_d'une_Servlet_.2f_contr.c3.b4leur_web" rel="internal">Ecriture d'une Servlet / contrôleur web</a></li><li><span>8.</span> <a href="http://miageprojet2.unice.fr/Master_MIAGE_1/Applications_Web/TP7_Applications_web_%3a_utilisation_d'une_base_de_donn%c3%a9es#Modification_de_index.jsp_en_front-end" rel="internal">Modification de index.jsp en front-end</a></li><li><span>9.</span> <a href="http://miageprojet2.unice.fr/Master_MIAGE_1/Applications_Web/TP7_Applications_web_%3a_utilisation_d'une_base_de_donn%c3%a9es#Executez_le_projet_!" rel="internal">Executez le projet !</a></li><li><span>10.</span> <a href="http://miageprojet2.unice.fr/Master_MIAGE_1/Applications_Web/TP7_Applications_web_%3a_utilisation_d'une_base_de_donn%c3%a9es#Travail_.c3.a0_rendre_pour_dans_15_jours" rel="internal">Travail à rendre pour dans 15 jours</a></li></ol></div><p></p>
+<div id="section_1"><a id="Introduction"></a><h2 class="editable">Introduction</h2>
+</div><div id="section_2"><a id="Cr.c3.a9ation_d'un_projet"></a><h2 class="editable">Création d'un projet</h2>
+<p>A l'aide de Netbeans, vous allez créer un nouveau projet de type 
+"java web/web application". Lors de la création une des étapes 
+correspond à l'écran suivant. Précisez bien que vous allez utiliser 
+glassfish, que vous allez faire du Java EE&nbsp;6 (pas 5 !) et que vous 
+voulez utiliser l'injection de code dans les sources du projet. Rappel :
+ l'injection de code est le fait d'utiliser des annotations de code et 
+de pouvoir utiliser des variables sans les avoir initialisées au 
+préalable.</p>
+<p><img alt="Snap12.jpg" class="internal default" src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/Snap12.jpg" style="width: 795px; height: 515px;"></p>
+</div><div id="section_3"><a id="Cr.c3.a9ation_d'une_base_de_donn.c3.a9es_vide"></a><h2 class="editable">Création d'une base de données vide</h2>
+<p>Dans ce TP nous allons réaliser une version modifiée du TP3 sur le 
+gestionnaire d'utilisateurs, à la différence près que nous allons 
+utiliser une vraie base de données relationnelle en lieu et place de la 
+base de données XML du TP3. Nous allons donc créer une base de données 
+vide (sans tables) pour nos utilisateurs.</p>
+<p>Allez dans l'onglet "services" et cliquez avec le bouton de droite 
+sur l'icone "JavaDB" qui est le SGBD&nbsp;livré d'origine avec le JDK. 
+Il s'agit d'un véritable SGBD, complet, écrit en java, livré avec la 
+distribution Java EE 6. Il s'appelle Derby. Pour information, les bases 
+sont stockées sous windows dans le répertoire .netbeans-derby situé sous
+ documents and settings/user/&lt;votre nom&gt;...</p>
+<p><img alt="Snap2.jpg" class="internal default" src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/Snap2.jpg" style="width: 459px; height: 291px;"></p>
+<p>Appelez la base comme vous voulez, je l'ai appelée "utilisateurs". <strong><span style="color: rgb(255, 0, 0);">Mettez un login et un mot de passe, c'est obligatoire si vous voulez éviter des déboires par la suite</span></strong> (notez que la dernière ligne vous indique le chemin du répertoire de la base)</p>
+<p><img alt="Snap3.jpg" class="internal default" src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/Snap3.jpg" style="width: 544px; height: 266px;"></p>
+<p>Une connexion est automatiquement ajoutée à la liste des connexions 
+dans l'onglet "services", cette "connexion" vous permettra d'administrer
+ la base de données depuis netbeans, qui contient un outil très pratique
+ pour cela (et qui marche avec tout type de SGBD : MySQL, etc.). Faites 
+clic droit / se connecter :</p>
+<p><img alt="Snap4.jpg" class="internal default" src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/Snap4.jpg" style="width: 533px; height: 522px;"></p>
+<p>La connexion est maintenant exploitable en cliquant sur le petit "+",
+ pour le moment, rien d'intéressant dedans, elle est vide ! Pas de 
+tables, rien !</p>
+</div><div id="section_4"><a id="Cr.c3.a9ation_d'un_mod.c3.a8le_(classe_entit.c3.a9)_d'Utilisateur_et_d'un_gestionnaire_de_persistence"></a><h2 class="editable">Création d'un modèle (classe entité) d'Utilisateur et d'un gestionnaire de persistence</h2>
+<p>Nous allons maitenant ajouter une classe "modèle" à notre projet. On 
+l'appellera "Utilisateur". Les modèles ont toujours un nom, en gros le 
+nom de la table dans laquelle les instances de ce modèle seront 
+stockées. Pour créer un modèle : clic droit sur le projet et 
+nouveau/classe entité :</p>
+<p><img alt="Snap5.jpg" class="internal default" src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/Snap5.jpg" style="width: 781px; height: 398px;"></p>
+<p>Vous appelerez ce modèle "Utilisateur" (et pas User car User est un 
+mot clé reservé SQL et cela peut poser problème), le placerez dans le 
+package utilisateurs.modeles, <span style="color: rgb(255, 0, 0);"><strong>lui donnerez comme </strong></span><u><span style="color: rgb(255, 0, 0);"><strong>clé primaire un type int</strong></span></u>
+ ou long (plus facile à gérer que Integer ou Long), et pour finir vous 
+allez créer une "unité de persistance". Selon les versions de netbeans, 
+il se peut que ce bouton "créer une unité de persistance" ne soit pas 
+dans le wizard à cet endroit-là mais il sera proposé de créer cette 
+unité de persistence dans l'étape suivante du wizard.</p>
+<p><img alt="Snap13.jpg" class="internal default" src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/Snap13.jpg" style="width: 743px; height: 509px;"></p>
+<p>L'unité de persistance est l'outil qui va faire la connexion avec la 
+base de données et qui servira à générer automatiquement les requêtes 
+SQL. Il utilisera en coulisse un outil de mapping relationnel / objet 
+(ici EclipseLink, mais déroulez le menu, vous verrez qu'on a le choix) :</p>
+<p><img alt="Snap14.jpg" class="internal default" src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/Snap14.jpg" style="width: 802px; height: 457px;"></p>
+<p>On précise ensuite pour la nouvelle source de données que le serveur 
+va connecter, un nom "logique", qui est libre, c'est le nom "au sens de 
+JNDI", l'API de Java qui permet de "nommer" des ressources. On choisit 
+parmi les connexions ouvertes dans netbeans celle qui correspond à la 
+base sur laquelle l'application va travailler. Ici on dit que le base 
+dont le nom est "BaseUsers" est en réalité une base Derby, sur 
+localhost, port 1527. Le login et le password seront récupérés par 
+netbeans et seront ajouté à un fichier de config xml que nous verrons un
+ peu plus loin.</p>
+<p><img alt="Snap15.jpg" class="internal default" src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/Snap15.jpg" style="width: 488px; height: 222px;"></p>
+<p>Enfin, on peut indiquer à l'unité de persistance sa "stratégie" : 
+lorsqu'on déploie l'application on lui demande de supprimer les tables 
+et de les recréer automatiquement. Cette stratégie est utile lorsque les
+ tables sont créées à partir des classes et que le contenu des classes 
+modèles peut évoluer. <span style="color: rgb(255, 0, 0);"><strong>Une fois les modèles figés, en général on passe en mode "ne rien modifier", ou juste "créer" </strong></span>ce qui ne permettra que de rajouter des tables lorsqu'on crééera de nouveaux modèles :</p>
+<p><img alt="Snap16.jpg" class="internal default" src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/Snap16.jpg" style="width: 798px; height: 462px;"></p>
+<p>Finalement, après ces étapes, on obtient à la fois une classe modèle 
+pour les utilisateurs (on les appelle des "classes entités", Entity en 
+anglais, ou des "EJB entity"...) et des fichiers de description XML à la
+ fois pour l'unité de persistance et pour la source de données qu'on va 
+déployer sur le serveur (fichier persistence.xml sous "configuration" 
+dans le projet, c'est un fichier standard de java EE), et un fichier 
+glassfish-resources.xml, propre à Glassfish, sous "server-resources" 
+dans le projet.</p>
+<p>Regardez ci-dessous le code de l'entité générée, noter les 
+annotations de code @Entity (qui dit : attention, se mappe sur une table
+ ayant le même nom, mais tout en majuscule, ici la table UTILISATEUR), 
+@Id qui indique la clé primaire, et @GeneratedValue(...) qui indique que
+ l'on veut une clé auto-incrémentée :</p>
+<div class="dp-highlighter"><div class="bar"><div class="tools"><a href="#" onclick="dp.sh.Toolbar.Command('ViewSource',this);return false;">view plain</a><a href="#" onclick="dp.sh.Toolbar.Command('PrintSource',this);return false;">print</a><a href="#" onclick="dp.sh.Toolbar.Command('About',this);return false;">?</a></div></div><ol start="1" class="dp-j"><li class="alt"><span><span class="annotation">@Entity</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="keyword">public</span><span>&nbsp;</span><span class="keyword">class</span><span>&nbsp;Utilisateur&nbsp;</span><span class="keyword">implements</span><span>&nbsp;Serializable&nbsp;{&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">private</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;</span><span class="keyword">final</span><span>&nbsp;</span><span class="keyword">long</span><span>&nbsp;serialVersionUID&nbsp;=&nbsp;1L;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="annotation">@Id</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="annotation">@GeneratedValue</span><span>(strategy&nbsp;=&nbsp;GenerationType.AUTO)&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">private</span><span>&nbsp;</span><span class="keyword">int</span><span>&nbsp;id;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">private</span><span>&nbsp;String&nbsp;firstname;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">private</span><span>&nbsp;String&nbsp;lastname;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">private</span><span>&nbsp;String&nbsp;login;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>&nbsp;Utilisateur()&nbsp;{&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>&nbsp;Utilisateur&nbsp;(</span><span class="keyword">final</span><span>&nbsp;String&nbsp;login,&nbsp;</span><span class="keyword">final</span><span>&nbsp;String&nbsp;lastname,&nbsp;</span><span class="keyword">final</span><span>&nbsp;String&nbsp;firstname)&nbsp;{&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">this</span><span>.login&nbsp;=&nbsp;login;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">this</span><span>.lastname&nbsp;=&nbsp;lastname;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">this</span><span>.firstname&nbsp;=&nbsp;firstname;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span>...&nbsp;&nbsp;</span></li></ol></div><pre name="code" class="java" style="display: none;">@Entity
+public class Utilisateur implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
+    private String firstname;
+    private String lastname;
+    private String login;
+
+    public Utilisateur() {
+    }
+
+    public Utilisateur (final String login, final String lastname, final String firstname) {
+        this.login = login;
+        this.lastname = lastname;
+        this.firstname = firstname;
+    }
+...</pre>
+<p>Notons également les fichiers XML&nbsp;générés. Persistence.xml 
+correspond au gestionnaire de persistance. Vous pouvez double-cliquer 
+dessus pour obtenir la fenêtre d'édition, aller voir le source XML :</p>
+<p><img alt="Snap17.jpg" class="internal default" src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/Snap17_002.jpg" style="width: 189px; height: 277px;"></p>
+<p>persistence.xml est un fichier standard Java EE, alors que<span style="color: rgb(255, 0, 0);"><strong>
+ le fichier sun-resource.xml (ou glassfish-resources, selon les versions
+ de glmassfish) est propriétaire et spécifique au serveur glassfish, 
+ouvrez-le, il indique à glassfish que l'on déploie une source de données
+ avec l'application et que l'on désire qu'il s'y connecte, s'il ne l'a 
+pas déjà dans sa liste</strong></span>. Le lien entre les deux c'est le nom JNDI&nbsp;de la base. Regardez les sources des fichiers XML pour vous faire une idée !</p>
+</div><div id="section_5"><a id="Compl.c3.a9tons_la_classe_entit.c3.a9_avec_des_constructeurs.2c_des_accesseurs.2c_des_modifieurs"></a><h2 class="editable">Complétons la classe entité avec des constructeurs, des accesseurs, des modifieurs</h2>
+<p>&nbsp;Ajoutez maitenant un constructeur avec paramètres et un 
+constructeur sans paramètre (obligatoire pour les beans), des accesseurs
+ et des modifieurs (clic droit, insérer du code/getter and setter). Vous
+ pouvez utiliser le raccourcis clic/droit/insérer du code/add property 
+(aussi appelable par alt-insert je crois).</p>
+<div class="dp-highlighter"><div class="bar"><div class="tools"><a href="#" onclick="dp.sh.Toolbar.Command('ViewSource',this);return false;">view plain</a><a href="#" onclick="dp.sh.Toolbar.Command('PrintSource',this);return false;">print</a><a href="#" onclick="dp.sh.Toolbar.Command('About',this);return false;">?</a></div></div><ol start="1" class="dp-j"><li class="alt"><span><span class="annotation">@Entity</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="keyword">public</span><span>&nbsp;</span><span class="keyword">class</span><span>&nbsp;Utilisateur&nbsp;</span><span class="keyword">implements</span><span>&nbsp;Serializable&nbsp;{&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">private</span><span>&nbsp;</span><span class="keyword">static</span><span>&nbsp;</span><span class="keyword">final</span><span>&nbsp;</span><span class="keyword">long</span><span>&nbsp;serialVersionUID&nbsp;=&nbsp;1L;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="annotation">@Id</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="annotation">@GeneratedValue</span><span>(strategy&nbsp;=&nbsp;GenerationType.AUTO)&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">private</span><span>&nbsp;</span><span class="keyword">int</span><span>&nbsp;id;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">private</span><span>&nbsp;String&nbsp;firstname;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">private</span><span>&nbsp;String&nbsp;lastname;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">private</span><span>&nbsp;String&nbsp;login;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>&nbsp;Utilisateur()&nbsp;{&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>&nbsp;Utilisateur(</span><span class="keyword">final</span><span>&nbsp;String&nbsp;login,&nbsp;</span><span class="keyword">final</span><span>&nbsp;String&nbsp;lastname,&nbsp;</span><span class="keyword">final</span><span>&nbsp;String&nbsp;firstname)&nbsp;{&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">this</span><span>.login&nbsp;=&nbsp;login;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">this</span><span>.lastname&nbsp;=&nbsp;lastname;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">this</span><span>.firstname&nbsp;=&nbsp;firstname;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>&nbsp;String&nbsp;getFirstname()&nbsp;{&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;firstname;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>&nbsp;</span><span class="keyword">void</span><span>&nbsp;setFirstname(String&nbsp;firstname)&nbsp;{&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">this</span><span>.firstname&nbsp;=&nbsp;firstname;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span>...&nbsp;&nbsp;</span></li></ol></div><pre name="code" class="java" style="display: none;">@Entity
+public class Utilisateur implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
+    private String firstname;
+    private String lastname;
+    private String login;
+
+       public Utilisateur() {
+    }
+
+    public Utilisateur(final String login, final String lastname, final String firstname) {
+        this.login = login;
+        this.lastname = lastname;
+        this.firstname = firstname;
+    }
+
+    public String getFirstname() {
+        return firstname;
+    }
+
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+...</pre>
+<p>En général dans les modèles ont ne rajoute pas grand chose à part des getters et des setters...</p>
+</div><div id="section_6"><a id="Ajout_d'un_gestionnaire_d'utilisateurs"></a><h2 class="editable">Ajout d'un gestionnaire d'utilisateurs</h2>
+<p>Vous devez commencer à être habitués à ce genre d'architecture. 
+Devant un modèle on met un "handler" ou "une façade" ou un "Data Access 
+Object (DAO)", ou un "gestionnaire"...&nbsp; Ici on va créer une classe 
+GestionnaireUtilisateur. Comme on fait du java EE "moderne", on va 
+utiliser un composant spécial appelé un Enterprise Java Bean stateless 
+(cours complet l'an prochain), c'est en gros une classe que l'on aura 
+pas besoin d'instancier et qui nous permettra d'utiliser un entity 
+manager facilement, grace à l'injection de code. On le déclare mais on 
+n'a pas besoin de l'intitialiser (voir le cours qui montre un exemple 
+d'utilisation d'un entity manager depuis un main et qui compare avec un 
+session bean).</p>
+<p><img alt="Snap18.jpg" class="internal default" src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/Snap18.jpg" style="width: 680px; height: 144px;"></p>
+<p>Puis pour l'étape suivante, donnez un nom et un package à votre EJB sessions :</p>
+<p><img alt="Snap19.jpg" class="internal default" src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/Snap19_002.jpg" style="width: 745px; height: 511px;"></p>
+<p>Cela va générer un code source GestionnaireUtilisateur relativement vide. <span style="color: rgb(255, 0, 0);"><strong>Modifiez le pour qu'il ressemble à cela</strong></span> :</p>
+<div class="dp-highlighter"><div class="bar"><div class="tools"><a href="#" onclick="dp.sh.Toolbar.Command('ViewSource',this);return false;">view plain</a><a href="#" onclick="dp.sh.Toolbar.Command('PrintSource',this);return false;">print</a><a href="#" onclick="dp.sh.Toolbar.Command('About',this);return false;">?</a></div></div><ol start="1" class="dp-j"><li class="alt"><span><span class="keyword">package</span><span>&nbsp;utilisateurs.gestionnaires;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span><span class="keyword">import</span><span>&nbsp;java.util.Collection;&nbsp;&nbsp;</span></span></li><li class=""><span><span class="keyword">import</span><span>&nbsp;javax.ejb.Stateless;&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="keyword">import</span><span>&nbsp;javax.persistence.EntityManager;&nbsp;&nbsp;</span></span></li><li class=""><span><span class="keyword">import</span><span>&nbsp;javax.persistence.PersistenceContext;&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="keyword">import</span><span>&nbsp;javax.persistence.Query;&nbsp;&nbsp;</span></span></li><li class=""><span><span class="keyword">import</span><span>&nbsp;utilisateurs.modeles.Utilisateur;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span><span class="annotation">@Stateless</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="keyword">public</span><span>&nbsp;</span><span class="keyword">class</span><span>&nbsp;GestionnaireUtilisateurs&nbsp;{&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//
+&nbsp;Ici&nbsp;injection&nbsp;de&nbsp;code&nbsp;:&nbsp;on&nbsp;n'initialise&nbsp;pas.&nbsp;L'entity&nbsp;manager&nbsp;sera&nbsp;créé</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;à&nbsp;partir&nbsp;du&nbsp;contenu&nbsp;de&nbsp;persistence.xml</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="annotation">@PersistenceContext</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">private</span><span>&nbsp;EntityManager&nbsp;em;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>&nbsp;</span><span class="keyword">void</span><span>&nbsp;creerUtilisateursDeTest()&nbsp;{&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;creeUtilisateur(<span class="string">"John"</span><span>,&nbsp;</span><span class="string">"Lennon"</span><span>,&nbsp;</span><span class="string">"jlennon"</span><span>);&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;creeUtilisateur(<span class="string">"Paul"</span><span>,&nbsp;</span><span class="string">"Mac&nbsp;Cartney"</span><span>,&nbsp;</span><span class="string">"pmc"</span><span>);&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;creeUtilisateur(<span class="string">"Ringo"</span><span>,&nbsp;</span><span class="string">"Starr"</span><span>,&nbsp;</span><span class="string">"rstarr"</span><span>);&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;creeUtilisateur(<span class="string">"Georges"</span><span>,&nbsp;</span><span class="string">"Harisson"</span><span>,&nbsp;</span><span class="string">"georgesH"</span><span>);&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>&nbsp;Utilisateur&nbsp;creeUtilisateur(String&nbsp;nom,&nbsp;String&nbsp;prenom,&nbsp;String&nbsp;login)&nbsp;{&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Utilisateur&nbsp;u&nbsp;=&nbsp;<span class="keyword">new</span><span>&nbsp;Utilisateur(nom,&nbsp;prenom,&nbsp;login);&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;em.persist(u);&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;u;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>&nbsp;Collection&lt;Utilisateur&gt;&nbsp;getAllUsers()&nbsp;{&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;Exécution&nbsp;d'une&nbsp;requête&nbsp;équivalente&nbsp;à&nbsp;un&nbsp;select&nbsp;*</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Query&nbsp;q&nbsp;=&nbsp;em.createQuery(<span class="string">"select&nbsp;u&nbsp;from&nbsp;Utilisateur&nbsp;u"</span><span>);&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;q.getResultList();&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;Add&nbsp;business&nbsp;logic&nbsp;below.&nbsp;(Right-click&nbsp;in&nbsp;editor&nbsp;and&nbsp;choose</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;"Insert&nbsp;Code&nbsp;&gt;&nbsp;Add&nbsp;Business&nbsp;Method")</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>}&nbsp;&nbsp;</span></li></ol></div><pre name="code" class="java" style="display: none;">package utilisateurs.gestionnaires;
+
+import java.util.Collection;
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import utilisateurs.modeles.Utilisateur;
+
+@Stateless
+public class GestionnaireUtilisateurs {
+    // Ici injection de code : on n'initialise pas. L'entity manager sera créé
+    // à partir du contenu de persistence.xml
+    @PersistenceContext
+    private EntityManager em;
+
+    public void creerUtilisateursDeTest() {
+        creeUtilisateur("John", "Lennon", "jlennon");
+        creeUtilisateur("Paul", "Mac Cartney", "pmc");
+        creeUtilisateur("Ringo", "Starr", "rstarr");
+        creeUtilisateur("Georges", "Harisson", "georgesH");
+    }
+
+    public Utilisateur creeUtilisateur(String nom, String prenom, String login) {
+        Utilisateur u = new Utilisateur(nom, prenom, login);
+        em.persist(u);
+        return u;
+    }
+
+    public Collection&lt;Utilisateur&gt; getAllUsers() {
+        // Exécution d'une requête équivalente à un select *
+        Query q = em.createQuery("select u from Utilisateur u");
+        return q.getResultList();
+    }
+    // Add business logic below. (Right-click in editor and choose
+    // "Insert Code &gt; Add Business Method")
+}</pre>
+<p><span style="background-color: rgb(255, 255, 0);"><span style="color: rgb(255, 0, 0);"><strong>ATTENTION : il ne faut pas inclure javax.management.Query mais javax.persistence.Query !!!!!</strong></span></span></p>
+<p>Notez plusieurs choses :</p>
+<ul> <li>C'est une classe java normale à part l'annotation @stateless 
+qui indique que c'est une classe qui pourra être utilisée par injection 
+de code, sans qu'on fasse de new (la servlet à suivre, l'utilisera de 
+cette manière)</li> <li>On a ajouté deux lignes pour définir un 
+EntityManager, c'est en gros une instance de l'unité de persistence que 
+l'on a créé plus tôt dans le TP. La variable "em" est en fait "le lien 
+avec la base de données". Avec em on pourra envoyer des requêtes, 
+insérer des objets, supprimer des objets dans la base. Note : on aurait 
+pu utiliser un wizard en faisant clic droit/persistence dans le code et 
+en choisissant "insérer un persistence manager".</li> <li>La méthode 
+creerUnUtilisateur créée de manière "normale" un utilisateur, 
+l'insertion en base est réalisée par l'appel de em.persist(u);</li> <li>La
+ méthode getAllUsers() fait l'équivalent d'un select * SQL&nbsp;sauf 
+qu'ici la requête dit "donne moi tous les objets u de type Utilisateur".
+ On fait de la programmation objet, on ne manipule pas des tuples ! La 
+valeur renvoyée par la requête est une collection d'Utilisateurs, soit 
+une collection d'objets !</li> <li>Le code est très simple et très propre !</li> <li>Bien
+ entendu, c'est ici que l'on rajoutera de la logique métier pour 
+supprimer des utilisateurs, rechercher par nom, par login, par id, etc.</li>
+</ul>
+</div><div id="section_7"><a id="Ecriture_d'une_Servlet_.2f_contr.c3.b4leur_web"></a><h2 class="editable">Ecriture d'une Servlet / contrôleur web</h2>
+<p>Comme pour le TP3, on met devant le gestionnaire une servlet qui va 
+servir d'interface de controle http. Faites clic droit sur le projet 
+nouveau/servlet :</p>
+<p><img alt="Snap20.jpg" class="internal default" src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/Snap20.jpg" style="width: 741px; height: 507px;"></p>
+<p>Dans le code, indiquez à la servlet qu'elle va utiliser le 
+gestionnaire d'Utilisateurs. Dans le source, clic droit/insérer du 
+code/call enterprise bean :</p>
+<p><img alt="Snap21.jpg" class="internal default" src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/Snap21_002.jpg" style="width: 180px; height: 165px;"></p>
+<p>Choisissez le gestionnaire :</p>
+<p><img alt="Snap22.jpg" class="internal default" src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/Snap22.jpg" style="width: 439px; height: 617px;"></p>
+<p>Notez l'ajout d'imports et d'une variable + une annotation de code dans votre Servlet :</p>
+<div class="dp-highlighter"><div class="bar"><div class="tools"><a href="#" onclick="dp.sh.Toolbar.Command('ViewSource',this);return false;">view plain</a><a href="#" onclick="dp.sh.Toolbar.Command('PrintSource',this);return false;">print</a><a href="#" onclick="dp.sh.Toolbar.Command('About',this);return false;">?</a></div></div><ol start="1" class="dp-j"><li class="alt"><span><span class="annotation">@WebServlet</span><span>(name&nbsp;=&nbsp;</span><span class="string">"ServletUsers"</span><span>,&nbsp;urlPatterns&nbsp;=&nbsp;{</span><span class="string">"/ServletUsers"</span><span>})&nbsp;&nbsp;</span></span></li><li class=""><span><span class="keyword">public</span><span>&nbsp;</span><span class="keyword">class</span><span>&nbsp;ServletUsers&nbsp;</span><span class="keyword">extends</span><span>&nbsp;HttpServlet&nbsp;{&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;ici&nbsp;injection&nbsp;de&nbsp;code&nbsp;!&nbsp;On&nbsp;n'initialise&nbsp;pas&nbsp;!</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="annotation">@EJB</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">private</span><span>&nbsp;GestionnaireUtilisateurs&nbsp;gestionnaireUtilisateurs;&nbsp;&nbsp;</span></span></li></ol></div><pre name="code" class="java" style="display: none;">@WebServlet(name = "ServletUsers", urlPatterns = {"/ServletUsers"})
+public class ServletUsers extends HttpServlet {
+    // ici injection de code ! On n'initialise pas !
+    @EJB
+    private GestionnaireUtilisateurs gestionnaireUtilisateurs;</pre>
+<p>La ligne @EJB dit qu'on ne veut pas s'occuper de créer à la main cette variable. Pas de new donc !</p>
+<p>Maitenant on complète la servlet de manière très similaire à celle du
+ TP3, pour qu'elle réponde à quelques actions de base comme "créer des 
+utilisateurs de test" ou "renvoyer la liste des utilisateurs" :</p>
+<div class="dp-highlighter"><div class="bar"><div class="tools"><a href="#" onclick="dp.sh.Toolbar.Command('ViewSource',this);return false;">view plain</a><a href="#" onclick="dp.sh.Toolbar.Command('PrintSource',this);return false;">print</a><a href="#" onclick="dp.sh.Toolbar.Command('About',this);return false;">?</a></div></div><ol start="1" class="dp-j"><li class="alt"><span><span class="comment">/*</span>&nbsp;</span></li><li class=""><span><span class="comment">&nbsp;*&nbsp;To&nbsp;change&nbsp;this&nbsp;template,&nbsp;choose&nbsp;Tools&nbsp;|&nbsp;Templates</span>&nbsp;</span></li><li class="alt"><span><span class="comment">&nbsp;*&nbsp;and&nbsp;open&nbsp;the&nbsp;template&nbsp;in&nbsp;the&nbsp;editor.</span>&nbsp;</span></li><li class=""><span><span class="comment">&nbsp;*/</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="keyword">package</span><span>&nbsp;servlets;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span><span class="keyword">import</span><span>&nbsp;java.io.IOException;&nbsp;&nbsp;</span></span></li><li class=""><span><span class="keyword">import</span><span>&nbsp;java.util.Collection;&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="keyword">import</span><span>&nbsp;javax.ejb.EJB;&nbsp;&nbsp;</span></span></li><li class=""><span><span class="keyword">import</span><span>&nbsp;javax.servlet.RequestDispatcher;&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="keyword">import</span><span>&nbsp;javax.servlet.ServletException;&nbsp;&nbsp;</span></span></li><li class=""><span><span class="keyword">import</span><span>&nbsp;javax.servlet.annotation.WebServlet;&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="keyword">import</span><span>&nbsp;javax.servlet.http.HttpServlet;&nbsp;&nbsp;</span></span></li><li class=""><span><span class="keyword">import</span><span>&nbsp;javax.servlet.http.HttpServletRequest;&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="keyword">import</span><span>&nbsp;javax.servlet.http.HttpServletResponse;&nbsp;&nbsp;</span></span></li><li class=""><span><span class="keyword">import</span><span>&nbsp;utilisateurs.gestionnaires.GestionnaireUtilisateurs;&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="keyword">import</span><span>&nbsp;utilisateurs.modeles.Utilisateur;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span><span class="comment">/**</span>&nbsp;</span></li><li class=""><span><span class="comment">&nbsp;*</span>&nbsp;</span></li><li class="alt"><span><span class="comment">&nbsp;*&nbsp;@author&nbsp;michel</span>&nbsp;</span></li><li class=""><span><span class="comment">&nbsp;*/</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="annotation">@WebServlet</span><span>(name&nbsp;=&nbsp;</span><span class="string">"ServletUsers"</span><span>,&nbsp;urlPatterns&nbsp;=&nbsp;{</span><span class="string">"/ServletUsers"</span><span>})&nbsp;&nbsp;</span></span></li><li class=""><span><span class="keyword">public</span><span>&nbsp;</span><span class="keyword">class</span><span>&nbsp;ServletUsers&nbsp;</span><span class="keyword">extends</span><span>&nbsp;HttpServlet&nbsp;{&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;ici&nbsp;injection&nbsp;de&nbsp;code&nbsp;!&nbsp;On&nbsp;n'initialise&nbsp;pas&nbsp;!</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="annotation">@EJB</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">private</span><span>&nbsp;GestionnaireUtilisateurs&nbsp;gestionnaireUtilisateurs;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/**</span>&nbsp;</span></li><li class=""><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Processes&nbsp;requests&nbsp;for&nbsp;both&nbsp;HTTP&nbsp;&lt;code&gt;GET&lt;/
+code&gt;&nbsp;and&nbsp;&lt;code&gt;POST&lt;/code&gt;&nbsp;methods.</span>&nbsp;</span></li><li class="alt"><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;request&nbsp;servlet&nbsp;request</span>&nbsp;</span></li><li class=""><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;response&nbsp;servlet&nbsp;response</span>&nbsp;</span></li><li class="alt"><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@throws&nbsp;ServletException&nbsp;if&nbsp;a&nbsp;servlet-specific&nbsp;error&nbsp;occurs</span>&nbsp;</span></li><li class=""><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@throws&nbsp;IOException&nbsp;if&nbsp;an&nbsp;I/O&nbsp;error&nbsp;occurs</span>&nbsp;</span></li><li class="alt"><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">protected</span><span>&nbsp;</span><span class="keyword">void</span><span>&nbsp;processRequest(HttpServletRequest&nbsp;request,&nbsp;HttpServletResponse&nbsp;response)&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">throws</span><span>&nbsp;ServletException,&nbsp;IOException&nbsp;{&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;Pratique&nbsp;pour&nbsp;décider&nbsp;de&nbsp;l'action&nbsp;à&nbsp;faire</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;action&nbsp;=&nbsp;request.getParameter(<span class="string">"action"</span><span>);&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;forwardTo&nbsp;=&nbsp;<span class="string">""</span><span>;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;message&nbsp;=&nbsp;<span class="string">""</span><span>;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span><span>&nbsp;(action&nbsp;!=&nbsp;</span><span class="keyword">null</span><span>)&nbsp;{&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span><span>&nbsp;(action.equals(</span><span class="string">"listerLesUtilisateurs"</span><span>))&nbsp;{&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Collection&lt;Utilisateur&gt;&nbsp;liste&nbsp;=&nbsp;gestionnaireUtilisateurs.getAllUsers();&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request.setAttribute(<span class="string">"listeDesUsers"</span><span>,&nbsp;liste);&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;forwardTo&nbsp;=&nbsp;<span class="string">"index.jsp?action=listerLesUtilisateurs"</span><span>;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;message&nbsp;=&nbsp;<span class="string">"Liste&nbsp;des&nbsp;utilisateurs"</span><span>;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<span class="keyword">else</span><span>&nbsp;</span><span class="keyword">if</span><span>&nbsp;(action.equals(</span><span class="string">"creerUtilisateursDeTest"</span><span>))&nbsp;{&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gestionnaireUtilisateurs.creerUtilisateursDeTest();&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Collection&lt;Utilisateur&gt;&nbsp;liste&nbsp;=&nbsp;gestionnaireUtilisateurs.getAllUsers();&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request.setAttribute(<span class="string">"listeDesUsers"</span><span>,&nbsp;liste);&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;forwardTo&nbsp;=&nbsp;<span class="string">"index.jsp?action=listerLesUtilisateurs"</span><span>;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;message&nbsp;=&nbsp;<span class="string">"Liste&nbsp;des&nbsp;utilisateurs"</span><span>;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<span class="keyword">else</span><span>&nbsp;{&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;forwardTo&nbsp;=&nbsp;<span class="string">"index.jsp?action=todo"</span><span>;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;message&nbsp;=&nbsp;<span class="string">"La&nbsp;fonctionnalité&nbsp;pour&nbsp;le&nbsp;paramètre&nbsp;"</span><span>&nbsp;+&nbsp;action&nbsp;+&nbsp;</span><span class="string">"&nbsp;est&nbsp;à&nbsp;implémenter&nbsp;!"</span><span>;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RequestDispatcher&nbsp;dp&nbsp;=&nbsp;request.getRequestDispatcher(forwardTo&nbsp;
++&nbsp;<span class="string">"&amp;message="</span><span>&nbsp;+&nbsp;message);&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dp.forward(request,&nbsp;response);&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;Après&nbsp;un&nbsp;forward,&nbsp;plus&nbsp;rien&nbsp;ne&nbsp;peut&nbsp;être&nbsp;exécuté&nbsp;après&nbsp;!</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class="alt"><span>.........&nbsp;suite&nbsp;du&nbsp;code&nbsp;.....&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>}&nbsp;&nbsp;</span></li></ol></div><pre name="code" class="java" style="display: none;">/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package servlets;
+
+import java.io.IOException;
+import java.util.Collection;
+import javax.ejb.EJB;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import utilisateurs.gestionnaires.GestionnaireUtilisateurs;
+import utilisateurs.modeles.Utilisateur;
+
+/**
+ *
+ * @author michel
+ */
+@WebServlet(name = "ServletUsers", urlPatterns = {"/ServletUsers"})
+public class ServletUsers extends HttpServlet {
+    // ici injection de code ! On n'initialise pas !
+    @EJB
+    private GestionnaireUtilisateurs gestionnaireUtilisateurs;
+
+    /**
+     * Processes requests for both HTTP &lt;code&gt;GET&lt;/code&gt; and &lt;code&gt;POST&lt;/code&gt; methods.
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        // Pratique pour décider de l'action à faire
+        String action = request.getParameter("action");
+        String forwardTo = "";
+        String message = "";
+
+        if (action != null) {
+            if (action.equals("listerLesUtilisateurs")) {
+                Collection&lt;Utilisateur&gt; liste = gestionnaireUtilisateurs.getAllUsers();
+                request.setAttribute("listeDesUsers", liste);
+                forwardTo = "index.jsp?action=listerLesUtilisateurs";
+                message = "Liste des utilisateurs";
+            } else if (action.equals("creerUtilisateursDeTest")) {
+                  gestionnaireUtilisateurs.creerUtilisateursDeTest();
+                Collection&lt;Utilisateur&gt; liste = gestionnaireUtilisateurs.getAllUsers();
+                request.setAttribute("listeDesUsers", liste);
+                forwardTo = "index.jsp?action=listerLesUtilisateurs";
+                message = "Liste des utilisateurs";
+            } else {
+                forwardTo = "index.jsp?action=todo";
+                message = "La fonctionnalité pour le paramètre " + action + " est à implémenter !";
+            }
+        }
+
+        RequestDispatcher dp = request.getRequestDispatcher(forwardTo + "&amp;message=" + message);
+        dp.forward(request, response);
+        // Après un forward, plus rien ne peut être exécuté après !
+    }
+......... suite du code .....
+  
+}</pre>
+</div><div id="section_8"><a id="Modification_de_index.jsp_en_front-end"></a><h2 class="editable">Modification de index.jsp en front-end</h2>
+<p>Ah ah !!!! Eh bien on reprend telle qu'elle la JSP&nbsp;du TP3&nbsp;! Aucune modification, rien !</p>
+<div class="dp-highlighter"><div class="bar"><div class="tools"><a href="#" onclick="dp.sh.Toolbar.Command('ViewSource',this);return false;">view plain</a><a href="#" onclick="dp.sh.Toolbar.Command('PrintSource',this);return false;">print</a><a href="#" onclick="dp.sh.Toolbar.Command('About',this);return false;">?</a></div></div><ol start="1" class="dp-xml"><li class="alt"><span><span class="tag">&lt;</span><span>%--&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;Document&nbsp;&nbsp;&nbsp;:&nbsp;index&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;Created&nbsp;on&nbsp;:&nbsp;16&nbsp;sept.&nbsp;2009,&nbsp;16:54:32&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;Author&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;michel&nbsp;buffa&nbsp;&nbsp;</span></li><li class="alt"><span>--%<span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span><span class="tag">&lt;</span><span>%@page&nbsp;</span><span class="attribute">contentType</span><span>=</span><span class="attribute-value">"text/html"</span><span>&nbsp;</span><span class="attribute">pageEncoding</span><span>=</span><span class="attribute-value">"UTF-8"</span><span>%</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&lt;!DOCTYPE&nbsp;HTML&nbsp;PUBLIC&nbsp;"-//W3C//DTD&nbsp;HTML&nbsp;4.01&nbsp;Transitional//EN"&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;"http://www.w3.org/TR/html4/loose.dtd"<span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span><span class="comments">&lt;!--
+&nbsp;Ne&nbsp;pas&nbsp;oublier&nbsp;cette&nbsp;ligne&nbsp;sinon&nbsp;tous&nbsp;les&nbsp;tags&nbsp;de&nbsp;la&nbsp;JSTL&nbsp;seront&nbsp;ignorés&nbsp;!
+&nbsp;--&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="tag">&lt;</span><span>%@taglib&nbsp;</span><span class="attribute">uri</span><span>=</span><span class="attribute-value">"http://java.sun.com/jsp/jstl/core"</span><span>&nbsp;</span><span class="attribute">prefix</span><span>=</span><span class="attribute-value">"c"</span><span>%</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span><span class="tag">&lt;</span><span class="tag-name">html</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">head</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">meta</span><span>&nbsp;</span><span class="attribute">http-equiv</span><span>=</span><span class="attribute-value">"Content-Type"</span><span>&nbsp;</span><span class="attribute">content</span><span>=</span><span class="attribute-value">"text/html;&nbsp;charset=UTF-8"</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">title</span><span class="tag">&gt;</span><span>Gestionnaire&nbsp;d'utilisateurs</span><span class="tag">&lt;/</span><span class="tag-name">title</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">head</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">body</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">h1</span><span class="tag">&gt;</span><span>Gestionnaire&nbsp;d'utilisateurs</span><span class="tag">&lt;/</span><span class="tag-name">h1</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comments">&lt;!--
+&nbsp;Message&nbsp;qui&nbsp;s'affiche&nbsp;lorsque&nbsp;la&nbsp;page&nbsp;est&nbsp;appelé&nbsp;avec&nbsp;un&nbsp;paramètre&nbsp;http&nbsp;message&nbsp;--
+&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">c:if</span><span>&nbsp;</span><span class="attribute">test</span><span>=</span><span class="attribute-value">"${!empty&nbsp;param['message']}"</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">h2</span><span class="tag">&gt;</span><span>Reçu&nbsp;message&nbsp;:&nbsp;${param.message}</span><span class="tag">&lt;/</span><span class="tag-name">h2</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">c:if</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">h2</span><span class="tag">&gt;</span><span>Menu&nbsp;de&nbsp;gestion&nbsp;des&nbsp;utilisateurs</span><span class="tag">&lt;/</span><span class="tag-name">h2</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">ul</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">li</span><span class="tag">&gt;</span><span class="tag">&lt;</span><span class="tag-name">a</span><span>&nbsp;</span><span class="attribute">href</span><span>=</span><span class="attribute-value">"ServletUsers?action=listerLesUtilisateurs"</span><span class="tag">&gt;</span><span>Afficher/raffraichir&nbsp;la&nbsp;liste&nbsp;de&nbsp;tous&nbsp;les&nbsp;utilisateurs</span><span class="tag">&lt;/</span><span class="tag-name">a</span><span class="tag">&gt;</span><span class="tag">&lt;/</span><span class="tag-name">li</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">p</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">ul</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">h2</span><span class="tag">&gt;</span><span>Liste&nbsp;des&nbsp;fonctionnalités&nbsp;à&nbsp;implémenter&nbsp;dans&nbsp;la&nbsp;Servlet&nbsp;
+(note&nbsp;:&nbsp;après&nbsp;chaque&nbsp;action&nbsp;cette&nbsp;page&nbsp;sera&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rappelée&nbsp;par&nbsp;la&nbsp;servlet&nbsp;avec&nbsp;la&nbsp;liste&nbsp;des&nbsp;utilisateurs&nbsp;raffraichie&nbsp;et&nbsp;un&nbsp;message&nbsp;de&nbsp;confirmation<span class="tag">&lt;/</span><span class="tag-name">h2</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">ol</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">li</span><span class="tag">&gt;</span><span class="tag">&lt;</span><span class="tag-name">a</span><span>&nbsp;</span><span class="attribute">href</span><span>=</span><span class="attribute-value">"ServletUsers?action=creerUtilisateursDeTest"</span><span class="tag">&gt;</span><span>Créer&nbsp;4&nbsp;utilisateurs&nbsp;de&nbsp;test</span><span class="tag">&lt;/</span><span class="tag-name">a</span><span class="tag">&gt;</span><span class="tag">&lt;/</span><span class="tag-name">li</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">li</span><span class="tag">&gt;</span><span>Créer&nbsp;un&nbsp;utilisateur</span><span class="tag">&lt;/</span><span class="tag-name">li</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">form</span><span>&nbsp;</span><span class="attribute">action</span><span>=</span><span class="attribute-value">"ServletUsers"</span><span>&nbsp;</span><span class="attribute">method</span><span>=</span><span class="attribute-value">"get"</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nom&nbsp;:&nbsp;<span class="tag">&lt;</span><span class="tag-name">input</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"text"</span><span>&nbsp;</span><span class="attribute">name</span><span>=</span><span class="attribute-value">"nom"</span><span class="tag">/&gt;</span><span class="tag">&lt;</span><span class="tag-name">br</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Prénom&nbsp;:&nbsp;<span class="tag">&lt;</span><span class="tag-name">input</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"text"</span><span>&nbsp;</span><span class="attribute">name</span><span>=</span><span class="attribute-value">"prenom"</span><span class="tag">/&gt;</span><span class="tag">&lt;</span><span class="tag-name">br</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Login&nbsp;:&nbsp;<span class="tag">&lt;</span><span class="tag-name">input</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"text"</span><span>&nbsp;</span><span class="attribute">name</span><span>=</span><span class="attribute-value">"login"</span><span class="tag">/&gt;</span><span class="tag">&lt;</span><span class="tag-name">br</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comments">&lt;!--
+&nbsp;Astuce&nbsp;pour&nbsp;passer&nbsp;des&nbsp;paramètres&nbsp;à&nbsp;une&nbsp;servlet&nbsp;depuis&nbsp;un&nbsp;formulaire&nbsp;JSP&nbsp;!--
+&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">input</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"hidden"</span><span>&nbsp;</span><span class="attribute">name</span><span>=</span><span class="attribute-value">"action"</span><span>&nbsp;</span><span class="attribute">value</span><span>=</span><span class="attribute-value">"creerUnUtilisateur"</span><span class="tag">/&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">input</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"submit"</span><span>&nbsp;</span><span class="attribute">value</span><span>=</span><span class="attribute-value">"Créer&nbsp;l'utilisateur"</span><span>&nbsp;</span><span class="attribute">name</span><span>=</span><span class="attribute-value">"submit"</span><span class="tag">/&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">form</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">li</span><span class="tag">&gt;</span><span>Afficher&nbsp;les&nbsp;détails&nbsp;d'un&nbsp;utilisateur</span><span class="tag">&lt;/</span><span class="tag-name">li</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">form</span><span>&nbsp;</span><span class="attribute">action</span><span>=</span><span class="attribute-value">"ServletUsers"</span><span>&nbsp;</span><span class="attribute">method</span><span>=</span><span class="attribute-value">"get"</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;login&nbsp;:&nbsp;<span class="tag">&lt;</span><span class="tag-name">input</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"text"</span><span>&nbsp;</span><span class="attribute">name</span><span>=</span><span class="attribute-value">"login"</span><span class="tag">/&gt;</span><span class="tag">&lt;</span><span class="tag-name">br</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">input</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"hidden"</span><span>&nbsp;</span><span class="attribute">name</span><span>=</span><span class="attribute-value">"action"</span><span>&nbsp;</span><span class="attribute">value</span><span>=</span><span class="attribute-value">"chercherParLogin"</span><span class="tag">/&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">input</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"submit"</span><span>&nbsp;</span><span class="attribute">value</span><span>=</span><span class="attribute-value">"Chercher"</span><span>&nbsp;</span><span class="attribute">name</span><span>=</span><span class="attribute-value">"submit"</span><span class="tag">/&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">form</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">li</span><span class="tag">&gt;</span><span>Modifier&nbsp;les&nbsp;détails&nbsp;d'un&nbsp;utilisateur&nbsp;:</span><span class="tag">&lt;/</span><span class="tag-name">li</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">form</span><span>&nbsp;</span><span class="attribute">action</span><span>=</span><span class="attribute-value">"ServletUsers"</span><span>&nbsp;</span><span class="attribute">method</span><span>=</span><span class="attribute-value">"get"</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Login&nbsp;:&nbsp;<span class="tag">&lt;</span><span class="tag-name">input</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"text"</span><span>&nbsp;</span><span class="attribute">name</span><span>=</span><span class="attribute-value">"login"</span><span class="tag">/&gt;</span><span class="tag">&lt;</span><span class="tag-name">br</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nom&nbsp;:&nbsp;<span class="tag">&lt;</span><span class="tag-name">input</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"text"</span><span>&nbsp;</span><span class="attribute">name</span><span>=</span><span class="attribute-value">"nom"</span><span class="tag">/&gt;</span><span class="tag">&lt;</span><span class="tag-name">br</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Prénom&nbsp;:&nbsp;<span class="tag">&lt;</span><span class="tag-name">input</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"text"</span><span>&nbsp;</span><span class="attribute">name</span><span>=</span><span class="attribute-value">"prenom"</span><span class="tag">/&gt;</span><span class="tag">&lt;</span><span class="tag-name">br</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">input</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"hidden"</span><span>&nbsp;</span><span class="attribute">name</span><span>=</span><span class="attribute-value">"action"</span><span>&nbsp;</span><span class="attribute">value</span><span>=</span><span class="attribute-value">"updateUtilisateur"</span><span class="tag">/&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">input</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"submit"</span><span>&nbsp;</span><span class="attribute">value</span><span>=</span><span class="attribute-value">"Mettre&nbsp;à&nbsp;jour"</span><span>&nbsp;</span><span class="attribute">name</span><span>=</span><span class="attribute-value">"submit"</span><span class="tag">/&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">form</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">ol</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comments">&lt;!--&nbsp;Fin&nbsp;du&nbsp;menu&nbsp;--&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comments">&lt;!--
+&nbsp;Zone&nbsp;qui&nbsp;affiche&nbsp;les&nbsp;utilisateurs&nbsp;si&nbsp;le&nbsp;paramètre&nbsp;action&nbsp;vaut&nbsp;listerComptes&nbsp;--
+&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">c:if</span><span>&nbsp;</span><span class="attribute">test</span><span>=</span><span class="attribute-value">"${param['action']&nbsp;==&nbsp;'listerLesUtilisateurs'}"</span><span>&nbsp;</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">h2</span><span class="tag">&gt;</span><span>Liste&nbsp;des&nbsp;utilisateurs</span><span class="tag">&lt;/</span><span class="tag-name">h2</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">table</span><span>&nbsp;</span><span class="attribute">border</span><span>=</span><span class="attribute-value">"10"</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comments">&lt;!--&nbsp;La&nbsp;ligne&nbsp;de&nbsp;titre&nbsp;du&nbsp;tableau&nbsp;des&nbsp;comptes&nbsp;--&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">tr</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">td</span><span class="tag">&gt;</span><span class="tag">&lt;</span><span class="tag-name">b</span><span class="tag">&gt;</span><span>Login</span><span class="tag">&lt;/</span><span class="tag-name">b</span><span class="tag">&gt;</span><span class="tag">&lt;/</span><span class="tag-name">td</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">td</span><span class="tag">&gt;</span><span class="tag">&lt;</span><span class="tag-name">b</span><span class="tag">&gt;</span><span>Nom</span><span class="tag">&lt;/</span><span class="tag-name">b</span><span class="tag">&gt;</span><span class="tag">&lt;/</span><span class="tag-name">td</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">td</span><span class="tag">&gt;</span><span class="tag">&lt;</span><span class="tag-name">b</span><span class="tag">&gt;</span><span>Prénom</span><span class="tag">&lt;/</span><span class="tag-name">b</span><span class="tag">&gt;</span><span class="tag">&lt;/</span><span class="tag-name">td</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">tr</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comments">&lt;!--&nbsp;Ici&nbsp;on&nbsp;affiche&nbsp;les&nbsp;lignes,&nbsp;une&nbsp;par&nbsp;utilisateur&nbsp;--&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comments">&lt;!--
+&nbsp;cette&nbsp;variable&nbsp;montre&nbsp;comment&nbsp;on&nbsp;peut&nbsp;utiliser&nbsp;JSTL&nbsp;et&nbsp;EL&nbsp;pour&nbsp;calculer&nbsp;--
+&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">c:set</span><span>&nbsp;</span><span class="attribute">var</span><span>=</span><span class="attribute-value">"total"</span><span>&nbsp;</span><span class="attribute">value</span><span>=</span><span class="attribute-value">"0"</span><span class="tag">/&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">c:forEach</span><span>&nbsp;</span><span class="attribute">var</span><span>=</span><span class="attribute-value">"u"</span><span>&nbsp;</span><span class="attribute">items</span><span>=</span><span class="attribute-value">"${requestScope['listeDesUsers']}"</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">tr</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">td</span><span class="tag">&gt;</span><span>${u.login}</span><span class="tag">&lt;/</span><span class="tag-name">td</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">td</span><span class="tag">&gt;</span><span>${u.firstname}</span><span class="tag">&lt;/</span><span class="tag-name">td</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">td</span><span class="tag">&gt;</span><span>${u.lastname}</span><span class="tag">&lt;/</span><span class="tag-name">td</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comments">&lt;!--&nbsp;On&nbsp;compte&nbsp;le&nbsp;nombre&nbsp;de&nbsp;users&nbsp;--&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">c:set</span><span>&nbsp;</span><span class="attribute">var</span><span>=</span><span class="attribute-value">"total"</span><span>&nbsp;</span><span class="attribute">value</span><span>=</span><span class="attribute-value">"${total+1}"</span><span class="tag">/&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">tr</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">c:forEach</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comments">&lt;!--&nbsp;Affichage&nbsp;du&nbsp;solde&nbsp;total&nbsp;dans&nbsp;la&nbsp;dernière&nbsp;ligne&nbsp;du&nbsp;tableau&nbsp;--&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">tr</span><span class="tag">&gt;</span><span class="tag">&lt;</span><span class="tag-name">td</span><span class="tag">&gt;</span><span class="tag">&lt;</span><span class="tag-name">b</span><span class="tag">&gt;</span><span>TOTAL</span><span class="tag">&lt;/</span><span class="tag-name">b</span><span class="tag">&gt;</span><span class="tag">&lt;/</span><span class="tag-name">td</span><span class="tag">&gt;</span><span class="tag">&lt;</span><span class="tag-name">td</span><span class="tag">&gt;</span><span class="tag">&lt;/</span><span class="tag-name">td</span><span class="tag">&gt;</span><span class="tag">&lt;</span><span class="tag-name">td</span><span class="tag">&gt;</span><span class="tag">&lt;</span><span class="tag-name">b</span><span class="tag">&gt;</span><span>${total}</span><span class="tag">&lt;/</span><span class="tag-name">b</span><span class="tag">&gt;</span><span class="tag">&lt;/</span><span class="tag-name">td</span><span class="tag">&gt;</span><span class="tag">&lt;</span><span class="tag-name">td</span><span class="tag">&gt;</span><span class="tag">&lt;/</span><span class="tag-name">td</span><span class="tag">&gt;</span><span class="tag">&lt;/</span><span class="tag-name">tr</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">table</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">c:if</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">body</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="tag">&lt;/</span><span class="tag-name">html</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li></ol></div><pre name="code" class="xml" style="display: none;">&lt;%--
+    Document   : index
+    Created on : 16 sept. 2009, 16:54:32
+    Author     : michel buffa
+--%&gt;
+
+&lt;%@page contentType="text/html" pageEncoding="UTF-8"%&gt;
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd"&gt;
+
+&lt;!-- Ne pas oublier cette ligne sinon tous les tags de la JSTL seront ignorés ! --&gt;
+&lt;%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%&gt;
+
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
+        &lt;title&gt;Gestionnaire d'utilisateurs&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Gestionnaire d'utilisateurs&lt;/h1&gt;
+
+
+        &lt;!-- Message qui s'affiche lorsque la page est appelé avec un paramètre http message --&gt;
+        &lt;c:if test="${!empty param['message']}"&gt;
+            &lt;h2&gt;Reçu message : ${param.message}&lt;/h2&gt;
+        &lt;/c:if&gt;
+
+
+        &lt;h2&gt;Menu de gestion des utilisateurs&lt;/h2&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="ServletUsers?action=listerLesUtilisateurs"&gt;Afficher/raffraichir la liste de tous les utilisateurs&lt;/a&gt;&lt;/li&gt;
+            &lt;p&gt;
+        &lt;/ul&gt;
+            &lt;h2&gt;Liste des fonctionnalités à implémenter dans la Servlet (note : après chaque action cette page sera
+                rappelée par la servlet avec la liste des utilisateurs raffraichie et un message de confirmation&lt;/h2&gt;
+        &lt;ol&gt;
+            &lt;li&gt;&lt;a href="ServletUsers?action=creerUtilisateursDeTest"&gt;Créer 4 utilisateurs de test&lt;/a&gt;&lt;/li&gt;
+
+            &lt;li&gt;Créer un utilisateur&lt;/li&gt;
+            &lt;form action="ServletUsers" method="get"&gt;
+                Nom : &lt;input type="text" name="nom"/&gt;&lt;br&gt;
+                Prénom : &lt;input type="text" name="prenom"/&gt;&lt;br&gt;
+                Login : &lt;input type="text" name="login"/&gt;&lt;br&gt;
+                &lt;!-- Astuce pour passer des paramètres à une servlet depuis un formulaire JSP !--&gt;
+                &lt;input type="hidden" name="action" value="creerUnUtilisateur"/&gt;
+                &lt;input type="submit" value="Créer l'utilisateur" name="submit"/&gt;
+            &lt;/form&gt;
+
+            &lt;li&gt;Afficher les détails d'un utilisateur&lt;/li&gt;
+            &lt;form action="ServletUsers" method="get"&gt;
+                login : &lt;input type="text" name="login"/&gt;&lt;br&gt;
+                &lt;input type="hidden" name="action" value="chercherParLogin"/&gt;
+                &lt;input type="submit" value="Chercher" name="submit"/&gt;
+            &lt;/form&gt;
+
+
+            &lt;li&gt;Modifier les détails d'un utilisateur :&lt;/li&gt;
+            &lt;form action="ServletUsers" method="get"&gt;
+                Login : &lt;input type="text" name="login"/&gt;&lt;br&gt;
+                Nom : &lt;input type="text" name="nom"/&gt;&lt;br&gt;
+                Prénom : &lt;input type="text" name="prenom"/&gt;&lt;br&gt;
+                &lt;input type="hidden" name="action" value="updateUtilisateur"/&gt;
+                &lt;input type="submit" value="Mettre à jour" name="submit"/&gt;
+            &lt;/form&gt;
+        &lt;/ol&gt;
+
+        &lt;!-- Fin du menu --&gt;
+
+        &lt;!-- Zone qui affiche les utilisateurs si le paramètre action vaut listerComptes --&gt;
+        &lt;c:if test="${param['action'] == 'listerLesUtilisateurs'}" &gt;
+            &lt;h2&gt;Liste des utilisateurs&lt;/h2&gt;
+
+            &lt;table border="10"&gt;
+                &lt;!-- La ligne de titre du tableau des comptes --&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;&lt;b&gt;Login&lt;/b&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;b&gt;Nom&lt;/b&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;b&gt;Prénom&lt;/b&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+
+                &lt;!-- Ici on affiche les lignes, une par utilisateur --&gt;
+                &lt;!-- cette variable montre comment on peut utiliser JSTL et EL pour calculer --&gt;
+                &lt;c:set var="total" value="0"/&gt;
+
+                &lt;c:forEach var="u" items="${requestScope['listeDesUsers']}"&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;${u.login}&lt;/td&gt;
+                        &lt;td&gt;${u.firstname}&lt;/td&gt;
+                        &lt;td&gt;${u.lastname}&lt;/td&gt;
+                        &lt;!-- On compte le nombre de users --&gt;
+                        &lt;c:set var="total" value="${total+1}"/&gt;
+                    &lt;/tr&gt;
+                &lt;/c:forEach&gt;
+
+                &lt;!-- Affichage du solde total dans la dernière ligne du tableau --&gt;
+                &lt;tr&gt;&lt;td&gt;&lt;b&gt;TOTAL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;${total}&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+            &lt;/table&gt;
+
+        &lt;/c:if&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</pre>
+</div><div id="section_9"><a id="Executez_le_projet_!"></a><h2 class="editable">Executez le projet !</h2>
+<p>Dans la page d'accueil, la même que pour le TP3, commencez par 
+cliquer sur "créer 4 utilisateurs de test", puis sur "afficher la liste 
+des utilisateurs"... Si tout va bien cela devrait marcher. Allez voir 
+dans l'onglet "services", ouvrez la connexion de votre base de données, 
+regardez sous ADMIN&nbsp;(si cela n'apparait pas, faites clic 
+droit/refresh), et sur la table UTILISATEURS, clic droit/voir les 
+données... Vous verrez que cela fonctionne bien.</p>
+</div><div id="section_10"><a id="Travail_.c3.a0_rendre_pour_dans_15_jours"></a><h2 class="editable">Travail à rendre pour dans 15 jours</h2>
+<p>C'est là qu'on se rend compte qu'on aurait du finir le tp3, qu'on 
+aurait du finir le TP2 aussi... Qu'on aurait du ne pas rater de TPs :-p</p>
+<ol> <li>Relire le chapitre du cours consacré aux Entity Beans et à JPA 
+(c'est un brève introduction, il y a encore beaucoup à dire sur le 
+sujet) :&nbsp;<a rel="internal" href="http://miageprojet2.unice.fr/@api/deki/files/1339/=IntroAuxEntityPart1.pptx" class="iconitext-16 ext-pptx internal">IntroAuxEntityPart1.pptx</a></li> <li>Utiliser les petits mémento sur le langage JPQL : <a rel="internal" href="http://miageprojet2.unice.fr/@api/deki/files/828/=578415_AppD_F.pdf" class="iconitext-16 ext-pdf internal">578415 AppD_F.pdf</a> et aussi une page A4&nbsp;de référence rapide (obligatoire !) : <a rel="internal" href="http://miageprojet2.unice.fr/@api/deki/files/829/=software_architecture2008-ejbql-quickref.pdf" class="iconitext-16 ext-pdf internal">software_architecture2008-ejbql-quickref.pdf</a> vous avez aussi la référence complète ici : <a class=" external" href="http://download.oracle.com/docs/cd/E11035_01/kodo41/full/html/ejb3_langref.html" rel="freelink">http://download.oracle.com/docs/cd/E...3_langref.html</a></li> <li>Compléter
+ l'implémentation des fonctionnalités (celles présentes dans la page 
+jsp) dans le gestionnaire et dans la servlet comme vous l'aviez fait 
+pour le TP3 ! Allez, au travail ;-) On veut pouvoir 
+rechercher/modifier/ajouter/supprimer un ou plusieurs utilisateurs. On 
+veut pouvoir récupérer tous les utilisateurs 10 par 10 pour pouvoir 
+faire de la pagination lors de l'affichage (regardez la partie du cours 
+sur JPQL).</li> <li>Rajoutez dans la JSP un header avec login/password 
+comme vous l'aviez fait dans un des TPs précédents. Rajoutez un menu à 
+gauche pour choisir les différentes opérations (afficher tous les 
+utilisateurs, créer un utilisateur, etc...), dans la partie principale 
+de la page, apparaitra l'interface utilisateur correspondant à la 
+fonction choisie. Par exemple, si on choisit de créer un utilisateur (on
+ suppose qu'on a le formulaire dans le menu à gauche), ou si on choisit 
+de créer des utilisateurs de test, ou si on choisit de faire une 
+recherche, la page principale affichera la liste des utilisateurs.</li> <li>Maintenant,
+ on veut un bout de code qui ne créee pas 4&nbsp;utilisateurs, mais 30 
+ou plus ! Si il y en a plus de 10, des boutons ou des liens 
+"suivants"/"précédents" ou "1-10,&nbsp;10-20, etc." apparaitront pour 
+proposer la pagination.&nbsp; Bien entendu il faudra que vos requêtes 
+JPQL&nbsp;ne récupèrent que les données à afficher (voir start, max 
+etc). SOuvenez-vous que je vous ai parlé d'un site <a class=" external" href="http://www.generatedata.com/" rel="freelink">http://www.generatedata.com/</a></li> <li>Bien
+ entendu, on ne peut rien faire si on est pas loggé !!!!! Soit vous 
+codez une vérification de password en dur, soit vous rajoutez des champs
+ login et password dans la base de données !</li>
+</ol>
+<p>Le TP est à rendre en binome pourdans deux séances. Il servira de 
+base au TP suivant, il est donc important que vous ayez codé dans l'EJB 
+session/gestionnaire les fonctionnalités nécessaires au CRUD&nbsp;sur 
+les utilisateurs. Il se peut que le TP suivant soit à rendre aussi...</p></div></div></div><div class="printfooter" id="printfooter"><hr>
+<p>Récupéré depuis "<a href="http://miageprojet2.unice.fr/index.php?title=Master_MIAGE_1/Applications_Web/TP7_Applications_web_:_utilisation_d%27une_base_de_donn%C3%A9es">http://
+miageprojet2.unice.fr/index.php?title=Master_MIAGE_1/Applications_Web/
+TP7_Applications_web_:_utilisation_d%27une_base_de_donn%C3%A9es</a>"</p>
+</div>
+									 			<div class="pageInfo">
+				 				<strong>Mots clés:</strong>
+			 					<div id="pageTags"><div class="pageTagList"><div class="item taglist"></div></div></div>			 			</div>		 			
+	 						 							 			</div>
+		 			
+		 					 			<div class="b-attachments" id="attachments">		 			
+		 				<div class="filesheader"><div class="filesformlink"><a href="http://miageprojet2.unice.fr/index.php?title=Master_MIAGE_1/Applications_Web/TP7_Applications_web_:_utilisation_d%27une_base_de_donn%C3%A9es" class="disabled" onclick="return false"><span class="icon"><img src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/icon-trans.gif" class="attach" alt=""></span><span class="text">Attacher fichier ou image</span></a></div><div class="filesheaderbg"><div class="filesheaderright"><div class="filesheadertext"><span class="icon"><img src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/icon-trans.gif" class="file" alt=""></span> <span class="text">Fichiers <span class="unweight" id="fileCount">(3)</span></span></div></div></div></div>		 				<div id="pageFiles"><div class="filescontent" id="attachFiles"><div class="table" id="attachTable"><table class="table" width="100%" cellspacing="0" cellpadding="0" border="0"><colgroup><col width="16"><col width="16"><col width=""><col width="80"><col width="145"><col width="115"><col width="75"></colgroup><tbody><tr class="bg1"><th class="col1" colspan="3">Fichier</th><th class="col4">Taille</th><th class="col5">Date</th><th class="col6">Attaché par</th><th class="col7">&nbsp;</th></tr><tr class="bg1"><td class="col1">&nbsp;</td><td class="col2"><a href="http://miageprojet2.unice.fr/@api/deki/files/828/=578415_AppD_F.pdf" class="filelink" title="578415 AppD_F.pdf"><span class="icon"><img src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/icon-trans.gif" class="mt-ext-pdf" alt=""></span></a></td><td class="col3"><a href="http://miageprojet2.unice.fr/@api/deki/files/828/=578415_AppD_F.pdf" class="filelink" title="578415 AppD_F.pdf">578415 AppD_F.pdf</a> <small></small><div id="class_ccf52102ef4b9a7ca4f4512cecab4779"><span class="desctext" id="fileDescDisplay_828"><span class="nodescription">Aucune description</span></span></div></td><td class="col4">61.77 Ko</td><td class="col5">12:54, 22 Mar 2010</td><td class="col6"><a href="http://miageprojet2.unice.fr/User:MichelBuffa" class="link-user" rel="internal">MichelBuffa</a></td><td class="col7"><a href="#" class="downarrow actionmenu" onclick="return FileMenu.show(this, 'ccf52102ef4b9a7ca4f4512cecab4779', '828', false, false, false, '', true);">Actions</a></td></tr><tr class="bg2 groupparent"><td class="col1"><a href="#" onclick="return toggleAttachments('1339')" class="internal"><span id="showlink-1339" style="display:none;"><span class="icon"><img src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/icon-trans.gif" class="expand" alt=""></span></span><span id="hidelink-1339"><span class="icon"><img src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/icon-trans.gif" class="contract" alt=""></span></span></a></td><td class="col2"><a href="http://miageprojet2.unice.fr/@api/deki/files/1339/=IntroAuxEntityPart1.pptx" class="filelink" title="IntroAuxEntityPart1.pptx"><span class="icon"><img src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/icon-trans.gif" class="mt-ext-pptx" alt=""></span></a></td><td class="col3"><a href="http://miageprojet2.unice.fr/@api/deki/files/1339/=IntroAuxEntityPart1.pptx" class="filelink" title="IntroAuxEntityPart1.pptx">IntroAuxEntityPart1.pptx</a> <small></small><div id="class_4921f817412da1662173e0178eb50960"><span class="desctext" id="fileDescDisplay_1339"><span class="nodescription">Aucune description</span></span></div></td><td class="col4">1210.8 Ko</td><td class="col5">07:38, 21 Mar 2012</td><td class="col6"><a href="http://miageprojet2.unice.fr/User:MichelBuffa" class="link-user" rel="internal">MichelBuffa</a></td><td class="col7"><a href="#" class="downarrow actionmenu" onclick="return FileMenu.show(this, '4921f817412da1662173e0178eb50960', '1339', false, false, false, '', true);">Actions</a></td></tr><tr class="attach_1339 bg2 group" style="display: none"><td class="col1"><span class="icon"><img src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/icon-trans.gif" class="dotcontinue" alt=""></span></td><td class="col2"><a href="http://miageprojet2.unice.fr/@api/deki/files/1339/=IntroAuxEntityPart1.pptx?revision=1" class="filelink" title="IntroAuxEntityPart1.pptx"><span class="icon"><img src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/icon-trans.gif" class="mt-ext-pptx" alt=""></span></a></td><td class="col3"><a href="http://miageprojet2.unice.fr/@api/deki/files/1339/=IntroAuxEntityPart1.pptx?revision=1" class="filelink" title="IntroAuxEntityPart1.pptx">IntroAuxEntityPart1.pptx</a> <small></small><div id="class_4921f817412da1662173e0178eb50960"><span class="desctext" id="fileDescDisplay_1339"><span class="nodescription">Aucune description</span></span></div></td><td class="col4">1210.8 Ko</td><td class="col5">19:56, 30 Mar 2011</td><td class="col6"><a href="http://miageprojet2.unice.fr/User:MichelBuffa" class="link-user" rel="internal">MichelBuffa</a></td><td class="col7">&nbsp;</td></tr><tr class="bg1"><td class="col1">&nbsp;</td><td class="col2"><a href="http://miageprojet2.unice.fr/@api/deki/files/829/=software_architecture2008-ejbql-quickref.pdf" class="filelink" title="software_architecture2008-ejbql-quickref.pdf"><span class="icon"><img src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/icon-trans.gif" class="mt-ext-pdf" alt=""></span></a></td><td class="col3"><a href="http://miageprojet2.unice.fr/@api/deki/files/829/=software_architecture2008-ejbql-quickref.pdf" class="filelink" title="software_architecture2008-ejbql-quickref.pdf">software_architecture2008-ejbql-quickref.pdf</a> <small></small><div id="class_841d51ab1eef66ab994048b24c0e3695"><span class="desctext" id="fileDescDisplay_829"><span class="nodescription">Aucune description</span></span></div></td><td class="col4">47.57 Ko</td><td class="col5">12:57, 22 Mar 2010</td><td class="col6"><a href="http://miageprojet2.unice.fr/User:MichelBuffa" class="link-user" rel="internal">MichelBuffa</a></td><td class="col7"><a href="#" class="downarrow actionmenu" onclick="return FileMenu.show(this, '841d51ab1eef66ab994048b24c0e3695', '829', false, false, false, '', true);">Actions</a></td></tr></tbody></table></div></div></div>		 				
+		 				<a name="attachImages"></a><div class="filesheader"><div class="filesheaderbg"><div class="filesheaderright"><div class="filesheadertext"><span class="icon"><img src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/icon-trans.gif" class="gallery" alt=""></span> <span class="text">Images <span class="unweight" id="imageCount">(21)</span></span></div></div></div></div>	
+		 				<div id="pageGalleryWrap"><div id="pageGallery"><div class="preControls"><div class="navigation">« <span class="disabled">précédent</span> <a href="http://miageprojet2.unice.fr/index.php?title=Master_MIAGE_1/Applications_Web/TP7_Applications_web_:_utilisation_d%27une_base_de_donn%C3%A9es&amp;galleryOffset=6" onclick="return MTGallery.Next();">suivant</a> »</div><div class="offset"><span class="offset">Voir 1 - 6 sur 21 images</span> | <a href="http://miageprojet2.unice.fr/index.php?title=Master_MIAGE_1/Applications_Web/TP7_Applications_web_:_utilisation_d%27une_base_de_donn%C3%A9es&amp;galleryOffset=showall" id="galleryViewAll" onclick="return MTGallery.ShowAll(false)">Voir tout</a> <form method="get" action="/index.php?title=Master_MIAGE_1/Applications_Web/TP7_Applications_web_:_utilisation_d%27une_base_de_donn%C3%A9es"><select id="galleryOrderBy" name="orderBy" onchange="return MTGallery.Sort(this);"><option value="date-desc" selected="selected">Trié par date décroissante</option><option value="date-asc">Trié par date décroissante</option><option value="name">Trié par nom</option><option value="desc">Trié par description</option></select></form></div></div>
+	<div class="galleryCell firstItem"><div class="imageWrap"><div class="image"><a href="http://miageprojet2.unice.fr/@api/deki/files/826/=Snap22.jpg?size=webview" title="Snap22.jpg" class="lightbox" rel="image-gallery"><img src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/Snap22_002.jpg" class="image" title="Snap22.jpg" alt=""></a><div class="desctext"><span id="class_934c5d04c14060a748111f4380ad39bd"><span class="desctext" id="fileDescDisplay_826"><span class="nodescription">Aucune description</span></span></span><br><a href="http://miageprojet2.unice.fr/@api/deki/files/826/=Snap22.jpg" title="Snap22.jpg">Snap22.jpg</a>&nbsp;&nbsp;<a href="#" class="downarrow actionmenu" onclick="return FileMenu.show(this, '934c5d04c14060a748111f4380ad39bd', '826', false, true, false, '/index.php?title=Master_MIAGE_1/Applications_Web/TP7_Applications_web_:_utilisation_d%27une_base_de_donn%C3%A9es&amp;file=826#attachImages', false, true, 'http://miageprojet2.unice.fr/@api/deki/files/826/=Snap22.jpg');">Actions</a></div></div></div></div>
+	<div class="galleryCell"><div class="imageWrap"><div class="image"><a href="http://miageprojet2.unice.fr/@api/deki/files/825/=Snap21.jpg?size=webview" title="Snap21.jpg" class="lightbox" rel="image-gallery"><img src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/Snap21.jpg" class="image" title="Snap21.jpg" alt=""></a><div class="desctext"><span id="class_6f783185bb7167146a31a95ec20f0a51"><span class="desctext" id="fileDescDisplay_825"><span class="nodescription">Aucune description</span></span></span><br><a href="http://miageprojet2.unice.fr/@api/deki/files/825/=Snap21.jpg" title="Snap21.jpg">Snap21.jpg</a>&nbsp;&nbsp;<a href="#" class="downarrow actionmenu" onclick="return FileMenu.show(this, '6f783185bb7167146a31a95ec20f0a51', '825', false, true, false, '/index.php?title=Master_MIAGE_1/Applications_Web/TP7_Applications_web_:_utilisation_d%27une_base_de_donn%C3%A9es&amp;file=825#attachImages', false, true, 'http://miageprojet2.unice.fr/@api/deki/files/825/=Snap21.jpg');">Actions</a></div></div></div></div>
+	<div class="galleryCell"><div class="imageWrap"><div class="image"><a href="http://miageprojet2.unice.fr/@api/deki/files/824/=Snap20.jpg?size=webview" title="Snap20.jpg" class="lightbox" rel="image-gallery"><img src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/Snap20_002.jpg" class="image" title="Snap20.jpg" alt=""></a><div class="desctext"><span id="class_e3a9266f93b6074662784e897be03ffb"><span class="desctext" id="fileDescDisplay_824"><span class="nodescription">Aucune description</span></span></span><br><a href="http://miageprojet2.unice.fr/@api/deki/files/824/=Snap20.jpg" title="Snap20.jpg">Snap20.jpg</a>&nbsp;&nbsp;<a href="#" class="downarrow actionmenu" onclick="return FileMenu.show(this, 'e3a9266f93b6074662784e897be03ffb', '824', false, true, false, '/index.php?title=Master_MIAGE_1/Applications_Web/TP7_Applications_web_:_utilisation_d%27une_base_de_donn%C3%A9es&amp;file=824#attachImages', false, true, 'http://miageprojet2.unice.fr/@api/deki/files/824/=Snap20.jpg');">Actions</a></div></div></div></div>
+
+<div class="br"></div>	<div class="galleryCell firstItem"><div class="imageWrap"><div class="image"><a href="http://miageprojet2.unice.fr/@api/deki/files/823/=Snap18.jpg?size=webview" title="Snap18.jpg" class="lightbox" rel="image-gallery"><img src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/Snap18_002.jpg" class="image" title="Snap18.jpg" alt=""></a><div class="desctext"><span id="class_193bbbbfcdd7eeb14cafd02699e88c30"><span class="desctext" id="fileDescDisplay_823"><span class="nodescription">Aucune description</span></span></span><br><a href="http://miageprojet2.unice.fr/@api/deki/files/823/=Snap18.jpg" title="Snap18.jpg">Snap18.jpg</a>&nbsp;&nbsp;<a href="#" class="downarrow actionmenu" onclick="return FileMenu.show(this, '193bbbbfcdd7eeb14cafd02699e88c30', '823', false, true, false, '/index.php?title=Master_MIAGE_1/Applications_Web/TP7_Applications_web_:_utilisation_d%27une_base_de_donn%C3%A9es&amp;file=823#attachImages', false, true, 'http://miageprojet2.unice.fr/@api/deki/files/823/=Snap18.jpg');">Actions</a></div></div></div></div>
+	<div class="galleryCell"><div class="imageWrap"><div class="image"><a href="http://miageprojet2.unice.fr/@api/deki/files/822/=Snap19.jpg?size=webview" title="Snap19.jpg" class="lightbox" rel="image-gallery"><img src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/Snap19.jpg" class="image" title="Snap19.jpg" alt=""></a><div class="desctext"><span id="class_1906f36d9760e0f4a4cf5dc771e018cb"><span class="desctext" id="fileDescDisplay_822"><span class="nodescription">Aucune description</span></span></span><br><a href="http://miageprojet2.unice.fr/@api/deki/files/822/=Snap19.jpg" title="Snap19.jpg">Snap19.jpg</a>&nbsp;&nbsp;<a href="#" class="downarrow actionmenu" onclick="return FileMenu.show(this, '1906f36d9760e0f4a4cf5dc771e018cb', '822', false, true, false, '/index.php?title=Master_MIAGE_1/Applications_Web/TP7_Applications_web_:_utilisation_d%27une_base_de_donn%C3%A9es&amp;file=822#attachImages', false, true, 'http://miageprojet2.unice.fr/@api/deki/files/822/=Snap19.jpg');">Actions</a></div></div></div></div>
+	<div class="galleryCell"><div class="imageWrap"><div class="image"><a href="http://miageprojet2.unice.fr/@api/deki/files/821/=Snap17.jpg?size=webview" title="Snap17.jpg" class="lightbox" rel="image-gallery"><img src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/Snap17.jpg" class="image" title="Snap17.jpg" alt=""></a><div class="desctext"><span id="class_f3bb52cd9e38e820b28b91342d81c042"><span class="desctext" id="fileDescDisplay_821"><span class="nodescription">Aucune description</span></span></span><br><a href="http://miageprojet2.unice.fr/@api/deki/files/821/=Snap17.jpg" title="Snap17.jpg">Snap17.jpg</a>&nbsp;&nbsp;<a href="#" class="downarrow actionmenu" onclick="return FileMenu.show(this, 'f3bb52cd9e38e820b28b91342d81c042', '821', false, true, false, '/index.php?title=Master_MIAGE_1/Applications_Web/TP7_Applications_web_:_utilisation_d%27une_base_de_donn%C3%A9es&amp;file=821#attachImages', false, true, 'http://miageprojet2.unice.fr/@api/deki/files/821/=Snap17.jpg');">Actions</a></div></div></div></div>
+
+<div class="br"></div><span style="display: none;"><a href="http://miageprojet2.unice.fr/@api/deki/files/820/=Snap14.jpg" class="lightbox" title="Snap14.jpg" rel="image-gallery"></a></span><span style="display: none;"><a href="http://miageprojet2.unice.fr/@api/deki/files/819/=Snap16.jpg" class="lightbox" title="Snap16.jpg" rel="image-gallery"></a></span><span style="display: none;"><a href="http://miageprojet2.unice.fr/@api/deki/files/818/=Snap15.jpg" class="lightbox" title="Snap15.jpg" rel="image-gallery"></a></span><span style="display: none;"><a href="http://miageprojet2.unice.fr/@api/deki/files/817/=Snap7.jpg" class="lightbox" title="Snap7.jpg" rel="image-gallery"></a></span><span style="display: none;"><a href="http://miageprojet2.unice.fr/@api/deki/files/816/=Snap13.jpg" class="lightbox" title="Snap13.jpg" rel="image-gallery"></a></span><span style="display: none;"><a href="http://miageprojet2.unice.fr/@api/deki/files/815/=Snap4.jpg" class="lightbox" title="Snap4.jpg" rel="image-gallery"></a></span><span style="display: none;"><a href="http://miageprojet2.unice.fr/@api/deki/files/814/=Snap3.jpg" class="lightbox" title="Snap3.jpg" rel="image-gallery"></a></span><span style="display: none;"><a href="http://miageprojet2.unice.fr/@api/deki/files/813/=Snap2.jpg" class="lightbox" title="Snap2.jpg" rel="image-gallery"></a></span><span style="display: none;"><a href="http://miageprojet2.unice.fr/@api/deki/files/812/=Snap1.jpg" class="lightbox" title="Snap1.jpg" rel="image-gallery"></a></span><span style="display: none;"><a href="http://miageprojet2.unice.fr/@api/deki/files/811/=Snap12.jpg" class="lightbox" title="Snap12.jpg" rel="image-gallery"></a></span><span style="display: none;"><a href="http://miageprojet2.unice.fr/@api/deki/files/810/=Snap10.jpg" class="lightbox" title="Snap10.jpg" rel="image-gallery"></a></span><span style="display: none;"><a href="http://miageprojet2.unice.fr/@api/deki/files/809/=Snap9.jpg" class="lightbox" title="Snap9.jpg" rel="image-gallery"></a></span><span style="display: none;"><a href="http://miageprojet2.unice.fr/@api/deki/files/808/=Snap8.jpg" class="lightbox" title="Snap8.jpg" rel="image-gallery"></a></span><span style="display: none;"><a href="http://miageprojet2.unice.fr/@api/deki/files/807/=Snap6.jpg" class="lightbox" title="Snap6.jpg" rel="image-gallery"></a></span><span style="display: none;"><a href="http://miageprojet2.unice.fr/@api/deki/files/806/=Snap5.jpg" class="lightbox" title="Snap5.jpg" rel="image-gallery"></a></span>
+<div class="br"></div><div class="postControls"></div></div></div>		 				
+		 				
+		 				<a name="attachImages"></a><div class="filesheader"><div class="filesheaderbg"><div class="filesheaderright"><div class="filesheadertext"><span class="icon"><img src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/icon-trans.gif" class="comments" alt=""></span> <span class="text">Commentaires (0)</span></div></div></div></div>	
+		 				<div id="comments"><div class="commentForm">Vous devez <a href="http://miageprojet2.unice.fr/index.php?title=Special:Userlogin&amp;returntotitle=Master+MIAGE+1%2FApplications+Web%2FTP7+Applications+web+%3A+utilisation+d%27une+base+de+donn%C3%A9es">être connecté</a> pour poster un commentaire.</div></div>		 			</div>
+		 			
+		 					 			
+		 					 					</div>
+				 		</div>
+					</div>
+				
+				</td>
+			</tr>
+			<tr class="bottom">
+				<td valign="top" class="left"></td>
+				<td valign="top" class="right"><br><div class="w_bot_fileshadow">&nbsp;</div>
+				<div class="poweredBy"><span>Powered by <a href="http://www.mindtouch.com/" class="product">MindTouch Deki Open Source Edition</a> v.8.08</span></div></td>
+			</tr>
+		</tbody></table>
+	</div>	
+</div>
+
+<div class="w_wbot">
+
+    <div id="popupMessage"></div>     
+    <script type="text/javascript">var _endtime = new Date().getTime(); var _size = 79927;</script>
+</div>
+
+<div onclick="menuBubble=true;" id="menuInfo" class="dmenu" style="display:none;">
+	<div class="dmenu-top"></div>
+	<div class="dmenu-body">
+		<ul><li><a href="http://miageprojet2.unice.fr/Special:ListRss"><span class="icon"><img src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/icon-trans.gif" class="listrss" alt=""></span><span class="text">Flux RSS</span></a></li><li><a href="http://miageprojet2.unice.fr/User:"><span class="icon"><img src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/icon-trans.gif" class="listusers" alt=""></span><span class="text">Utilisateurs</span></a></li><li><a href="http://miageprojet2.unice.fr/Template:"><span class="icon"><img src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/icon-trans.gif" class="templatesroot" alt=""></span><span class="text">Modèles</span></a></li><li class="separator"></li><li><a href="http://miageprojet2.unice.fr/Special:Sitemap"><span class="icon"><img src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/icon-trans.gif" class="sitemap" alt=""></span><span class="text">Plan du site</span></a></li><li><a href="http://miageprojet2.unice.fr/Special:Popularpages"><span class="icon"><img src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/icon-trans.gif" class="popularpages" alt=""></span><span class="text">Pages populaires</span></a></li><li><a href="http://miageprojet2.unice.fr/Special:About"><span class="icon"><img src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/icon-trans.gif" class="about" alt=""></span><span class="text">A propos</span></a></li></ul>	</div>
+	<div class="dmenu-bottom"></div>
+</div>
+
+<div onclick="menuBubble=true;" class="dmenu" id="pageMenuContent" style="display:none;">
+	<div class="dmenu-top"></div>
+	<div class="dmenu-body">			
+		<ul><li><a href="#" class="disabled" onclick="menuOff('pageMenuContent');"><span class="icon"><img src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/icon-trans.gif" class="watch-disabled" alt=""></span><span class="text">Surveiller</span></a></li><li><a href="#attachForm" class="disabled" onclick="menuOff('pageMenuContent');return false"><span class="icon"><img src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/icon-trans.gif" class="attach-disabled" alt=""></span><span class="text">Attacher fichier ou image</span></a></li><li><a href="#" class="disabled" onclick="menuOff('pageMenuContent');return false"><span class="icon"><img src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/icon-trans.gif" class="restrict-disabled" alt=""></span><span class="text">Accès restreint</span></a></li><li><a href="#" class="disabled" onclick="menuOff('pageMenuContent');return false"><span class="icon"><img src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/icon-trans.gif" class="move-disabled" alt=""></span><span class="text">Déplacer</span></a></li><li><a href="#" class="disabled" onclick="menuOff('pageMenuContent');return false"><span class="icon"><img src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/icon-trans.gif" class="delete-disabled" alt=""></span><span class="text">Supprimer</span></a></li><li><a href="#" class="disabled" onclick="menuOff('pageMenuContent');return false"><span class="icon"><img src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/icon-trans.gif" class="tag-disabled" alt=""></span><span class="text">Mots clés</span></a></li><li><a href="#" class="disabled" onclick="menuOff('pageMenuContent');return false"><span class="icon"><img src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/icon-trans.gif" class="pageemail-disabled" alt=""></span><span class="text">Envoyer la page</span></a></li><li><a href="#" class="disabled" onclick="menuOff('pageMenuContent');return false"><span class="icon"><img src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/icon-trans.gif" class="pageproperties-disabled" alt=""></span><span class="text">Propriétés de la page</span></a></li><li><a href="http://miageprojet2.unice.fr/index.php?title=Talk:Master_MIAGE_1/Applications_Web/TP7_Applications_web_:_utilisation_d%27une_base_de_donn%C3%A9es" class="" onclick="menuOff('pageMenuContent');"><span class="icon"><img src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/icon-trans.gif" class="pagetalk" alt=""></span><span class="text">Page de discussion</span></a></li></ul>	</div>
+	<div class="dmenu-bottom"></div>
+</div>
+
+<div onclick="menuBubble=true;" class="dmenu" id="menuBacklink" style="display:none;">
+	<div class="dmenu-top_m"></div>
+	<div class="dmenu-body_m">
+		<ul><li class="first"><a href="http://miageprojet2.unice.fr/Master_MIAGE_1/Applications_Web">Master MIAGE 1/Applications Web</a></li><li><a href="http://miageprojet2.unice.fr/index.php?title=Intranet_de_Michel_Buffa/Applications_web%2C_M1_Miage_2010-2011">Intranet de Michel Buffa/Applications web, M1 Miage 2010-2011</a></li><li><a href="http://miageprojet2.unice.fr/index.php?title=Intranet_de_Michel_Buffa/Cours_composants_distribu%C3%A9s_pour_l%27entreprise_%2F%2F_EJB_2009/Projet_MBDS_Ha%C3%AFti_2010-2011">Intranet de Michel Buffa/Cours composants distribués pour l'entreprise / EJB 2009/Projet MBDS Haïti 2010-2011</a></li><li class="last"><a href="http://miageprojet2.unice.fr/Intranet_de_Michel_Buffa/Applications_web_M1_Miage_2011-2012">Intranet de Michel Buffa/Applications web M1 Miage 2011-2012</a></li></ul>	</div>
+	<div class="dmenu-bottom_m"></div>
+</div>
+
+<div onclick="menuBubble=true;" class="dmenu" id="menuPageContent" style="display:none;">
+		<div class="dmenu-top_m"></div>
+		<div class="dmenu-body_m" id="menuToc">
+			<div class="pageToc"><h5>Table des matières</h5><ol style="list-style-type:none; margin-left:0px; padding-left:0px;"><li><span>1.</span> <a href="http://miageprojet2.unice.fr/Master_MIAGE_1/Applications_Web/TP7_Applications_web_%3a_utilisation_d'une_base_de_donn%c3%a9es#Introduction" rel="internal">Introduction</a></li><li><span>2.</span> <a href="http://miageprojet2.unice.fr/Master_MIAGE_1/Applications_Web/TP7_Applications_web_%3a_utilisation_d'une_base_de_donn%c3%a9es#Cr.c3.a9ation_d'un_projet" rel="internal">Création d'un projet</a></li><li><span>3.</span> <a href="http://miageprojet2.unice.fr/Master_MIAGE_1/Applications_Web/TP7_Applications_web_%3a_utilisation_d'une_base_de_donn%c3%a9es#Cr.c3.a9ation_d'une_base_de_donn.c3.a9es_vide" rel="internal">Création d'une base de données vide</a></li><li><span>4.</span> <a href="http://miageprojet2.unice.fr/Master_MIAGE_1/Applications_Web/TP7_Applications_web_%3a_utilisation_d'une_base_de_donn%c3%a9es#Cr.c3.a9ation_d'un_mod.c3.a8le_(classe_entit.c3.a9)_d'Utilisateur_et_d'un_gestionnaire_de_persistence" rel="internal">Création d'un modèle (classe entité) d'Utilisateur et d'un gestionnaire de persistence</a></li><li><span>5.</span> <a href="http://miageprojet2.unice.fr/Master_MIAGE_1/Applications_Web/TP7_Applications_web_%3a_utilisation_d'une_base_de_donn%c3%a9es#Compl.c3.a9tons_la_classe_entit.c3.a9_avec_des_constructeurs.2c_des_accesseurs.2c_des_modifieurs" rel="internal">Complétons la classe entité avec des constructeurs, des accesseurs, des modifieurs</a></li><li><span>6.</span> <a href="http://miageprojet2.unice.fr/Master_MIAGE_1/Applications_Web/TP7_Applications_web_%3a_utilisation_d'une_base_de_donn%c3%a9es#Ajout_d'un_gestionnaire_d'utilisateurs" rel="internal">Ajout d'un gestionnaire d'utilisateurs</a></li><li><span>7.</span> <a href="http://miageprojet2.unice.fr/Master_MIAGE_1/Applications_Web/TP7_Applications_web_%3a_utilisation_d'une_base_de_donn%c3%a9es#Ecriture_d'une_Servlet_.2f_contr.c3.b4leur_web" rel="internal">Ecriture d'une Servlet / contrôleur web</a></li><li><span>8.</span> <a href="http://miageprojet2.unice.fr/Master_MIAGE_1/Applications_Web/TP7_Applications_web_%3a_utilisation_d'une_base_de_donn%c3%a9es#Modification_de_index.jsp_en_front-end" rel="internal">Modification de index.jsp en front-end</a></li><li><span>9.</span> <a href="http://miageprojet2.unice.fr/Master_MIAGE_1/Applications_Web/TP7_Applications_web_%3a_utilisation_d'une_base_de_donn%c3%a9es#Executez_le_projet_!" rel="internal">Executez le projet !</a></li><li><span>10.</span> <a href="http://miageprojet2.unice.fr/Master_MIAGE_1/Applications_Web/TP7_Applications_web_%3a_utilisation_d'une_base_de_donn%c3%a9es#Travail_.c3.a0_rendre_pour_dans_15_jours" rel="internal">Travail à rendre pour dans 15 jours</a></li></ol></div>		</div>
+		<div class="dmenu-bottom_m"></div>
+</div>
+
+
+			
+<div class="ui-msg-wrap" id="MTMessage" style="display: none;">
+	<div class="ui-msg ui-errormsg" id="MTMessageStyle">
+		<div class="ui-msg-opt">
+			<ul>
+				<li><a href="#" class="dismiss" onclick="return MTMessage.Hide();">effacer le message</a></li>
+				<li><a href="#" class="details" id="MTMessageDetailsLink" onclick="return MTMessage.ShowDetails(this);">voir détails</a></li>
+			</ul>
+			<div class="ui-msg-autoclose">
+				<span id="MTMessageUnpaused" style="display: inline;">Ce message disparaitra dans <span id="MTMessageTimer"></span>  secondes</span>
+				<span id="MTMessagePaused" style="display: none;">Le temporisateur de message a été arrêté</span>
+			</div>
+		</div>
+		<div class="ui-msg-header" id="MTMessageHeader"></div>
+		<div class="ui-msg-desc" id="MTMessageDesc"></div>
+		<div class="ui-msg-desc" id="MTMessageDetails" style="display: none;">
+			<p>Affichage Détails:</p>
+		</div>
+	</div>
+</div><div id="menuFiller"></div><div id="bodyHeight"></div><script src="TP%20Applications%20web%20utilisation%20d'une%20base%20de%20donn%C3%A9es%20-%20miageprojet2_files/urchin.js" type="text/javascript"></script><script type="text/javascript">_uacct = "UA-68075-16";urchinTracker();</script>
+<!-- Served by miageprojet2 in 0.46 secs. -->
+
+<script type="text/javascript">/*<![CDATA[*/DekiWiki.$(function(){dp.SyntaxHighlighter.HighlightAll('code');});/*]]>*/</script>  
+</body></html>

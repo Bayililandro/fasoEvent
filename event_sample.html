@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Event Eater</title>
+
+    <meta name="viewport" content="width=100%; initial-scale=1; maximum-scale=1; minimum-scale=1; user-scalable=no;">
+    <meta content="Aryan Ebrahimpour" name="author">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <meta property="og:title" content="Event Eater" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Gérez vos événements plus facilement !" />
+    <meta property="og:locale" content="fr-FR" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="lib/Oxlip/oxlip-0.0.2.0.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/fonts/fontiran.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css?guid=85234fdc-1b80-4239-aab1-645ce19f8eb2" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="shadow-block">
+        <div class="container navbar">
+            <div class="header-left">
+                <a class="menu-item" href="index.html">Event Eater</a>
+                <a class="menu-item top-menu-chev" href="#"><i id="chev-icon" class="fas fa-chevron-down"></i></a>
+            </div>
+            <div class="header-right">
+                <a class="menu-item" href="signup.html">S'inscrire</a>
+                <a class="menu-item" href="signin.html">Se connecter</a>
+                <a class="menu-item" href="profile.html">
+                    <div class="area row ai-center">
+                        <img class="user-loggedin-avatar" src="assets/images/default_user_icon.png" width="24px" height="24px" />
+                        Aryan Ebrahimpour
+                    </div>
+                </a>
+                <a class="hamburger menu-item" href="#"><i class="fas fa-ellipsis-h"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="content-body">
+        <div class="container row h-expand">
+            <div class="sidebar shadow-block area ox">
+                <div class="area column oxf ">
+                    <div class="profile-module area column ai-center">
+                        <img class="round" src="assets/images/default_user_icon.png" width="96px" height="96px" />
+                        <span class="profile-name">Aryan Ebrahimpour</span>
+                        <span class="profile-meta">Ingénieur logiciel @ Microsoft</span>
+                    </div>
+                </div>
+                <div class="area column side-menu ox">
+                    <div class="area ai-start ox">
+
+                        <div class="side-group-title">Social</div>
+
+                        <a href="profile.html" class="side-item"><span><i class="fas fa-user-circle"></i> Profil</span></a>
+                        <a href="notifications.html" class="side-item"><span><i class="fas fa-bell"></i> Notifications</span></a>
+
+                        <div class="side-group-title">Gestion</div>
+
+                        <a href="events.html" class="side-item selected"><span><i class="fas fa-calendar"></i> Événements</span></a>
+                        <a href="organizations.html" class="side-item"><span><i class="fas fa-building"></i>
+                                Organisations</span></a>
+
+                        <div class="side-group-title">Administrateur</div>
+
+                        <a href="host_requests.html" class="side-item"><span><i class="fas fa-calendar-plus"></i> Demandes
+                                d'hébergement</span></a>
+                        <a href="join_requests.html" class="side-item"><span><i class="fas fa-user-clock"></i> Demandes de
+                                participation</span></a>
+                        <a href="error.html" class="side-item"><span><i class="fas fa-exclamation-triangle"></i> Page
+                                d'erreur</span></a>
+
+                    </div>
+                    <div class="side-menu-end area ai-end">
+                        <a href="#" class="side-item"><span><i class="fas fa-cog"></i> Paramètres</span></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Ajouter la classe ox-nomargin et ox-force pour le côté des événements side-content -->
+            <div class="side-content area ox3 ox-nomargin ox-force">
+                <div class="area column ox ac-start no-wrap ovx-hidden">
+                    <div id="event-banner" style="background: url('assets/photos/banner.jpg')" class="text-center no-margin area column jc-center">
+                        <img class="as-center round" width="100" height="100" src="assets/images/default_user_icon.png" />
+                        <span class="event-title">Introduction au test unitaire</span>
+                        <span class="event-presenter">par Aryan Ebrahimpour</span>
+                    </div>
+                    <div class="event-content area column ox stay-away sides">
+                        <span class="content-heading">Détails de l'événement</span>
+                        <div class="area row ox info-item">
+                            <span class="title">Nom :</span>
+                            <span class="value">Présentation d'une liste sélectionnée de frameworks JS</span>
+                        </div>
+                        <div class="area row ox info-item">
+                            <span class="title">Description :</span>
+                            <span class="value">Décrivez votre événement ici...</span>
+                        </div>
+
+                        <span class="content-heading">Infos du présentateur</span>
+                        <div class="area row ox info-item">
+                            <span class="title">Nom :</span>
+                            <span class="value">John Doe...</span>
+                        </div>
+                        <div class="area row ox info-item">
+                            <span class="title">À propos :</span>
+                            <span class="value">Décrivez-vous ici...</span>
+                        </div>
+                        <div class="area row ox info-item">
+                            <span class="title">CV :</span>
+                            <a href="#" class="value">Télécharger</a>
+                        </div>
+
+                        <span class="content-heading">Sponsors</span>
+                        <div class="area row ox">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Nom du sponsor</th>
+                                        <th scope="col">Miniature</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Linkedin</th>
+                                        <td></td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <span class="content-heading">Sous-sections</span>
+                        <div class="area row ox">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Titre de la sous-section</th>
+                                        <th scope="col">Heure</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Présentation de .NET Core</th>
+                                        <td>10h30</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Qu'est-ce que ASP.NET ?</th>
+                                        <td>11h00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="shadow-block">
+        <div class="area h-expand jc-center text-center">Aucun droit réservé !</div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Event Eater</title>
+
+    <meta name="viewport" content="width=100%; initial-scale=1; maximum-scale=1; minimum-scale=1; user-scalable=no;">
+    <meta content="Aryan Ebrahimpour" name="author">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <meta property="og:title" content="Event Eater" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Gérez vos événements plus facilement !" />
+    <meta property="og:locale" content="fr-FR" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="lib/Oxlip/oxlip-0.0.2.0.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/fonts/fontiran.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css?guid=85234fdc-1b80-4239-aab1-645ce19f8eb2" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+</head>
+
+<body>
+       <!-- Load an icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-w3XKLs5mLr9I3lj9nk2k4lV/9suPfF0d8UbV3IqUzF5sdoXhq5NzF+g6a4WyCrzppFEXL/By3i2lJuxhwjP17A==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="navbar">
+     <span class="welcome-text">Bienvenue, Promoteur <i><img class="round" src="assets/images/default_user_icon.png" width="30px" height="30px" /></i></span>
+     <a class="active" href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>
+     <a href="#"><i class="fa fa-fw fa-search"></i> Search</a>
+     <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+     <a class="active1"  href="#"><i class="fas fa-sign-out-alt"></i> Deconnexion</a> 
+                    </div>
+                </a>
+                <a class="hamburger menu-item" href="#"><i class="fas fa-ellipsis-h"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="content-body">
+        <div class="container row h-expand">
+            <div class="sidebar shadow-block area ox">
+                <div class="area column oxf ">
+                    <div class="profile-module area column ai-center">
+                        <img class="round" src="assets/images/default_user_icon.png" width="96px" height="96px" />
+                        <span class="profile-name">Aryan Ebrahimpour</span>
+                        <span class="profile-meta">Ingénieur logiciel @ Microsoft</span>
+                    </div>
+                </div>
+                <div class="area column side-menu ox">
+                    <div class="area ai-start ox">
+
+                        <div class="side-group-title">Social</div>
+
+                        <a href="profile.html" class="side-item"><span><i class="fas fa-user-circle"></i> Profil</span></a>
+                        <a href="notifications.html" class="side-item"><span><i class="fas fa-bell"></i> Notifications</span></a>
+
+                        <div class="side-group-title">Gestion</div>
+
+                        <a href="events.html" class="side-item selected"><span><i class="fas fa-calendar"></i> Événements</span></a>
+                        <a href="organizations.html" class="side-item selected"><span><i class="icone-abonne"></i> Mes abonnés</span></a>
+                        <div class="side-menu-end area ai-end">
+                            <a href="#" class="side-item"><span><i class="fas fa-cog"></i> Paramètres</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="side-content area ox3">
+                <div class="area column ox ac-start no-wrap ovx-hidden">
+                    <h3 class="stay-away">Ajouter un nouvel événement</h3>
+                    <div class="area row stay-away">
+                        <a href="events.html" class="btn" >Retour à la modération des événements</a>
+                    </div>
+                    <form id="add-event-form">
+                        <div class="area column ox">
+                            <span class="content-heading">Détails de l'événement</span>
+                            <div class="area row ox">
+                                <label>Nom :</label>
+                                <input class="ox" type="text" placeholder="donner un nom à votre événement" />
+                            </div>
+                            <div class="area row ox">
+                                <label>Catégorie :</label>
+                                <select class="ox" id="categorie" name="categorie">
+                                    <option value="cinema">Cinéma</option>
+                                    <option value="concert">Concert</option>
+                                    <option value="theatre">Théâtre</option>
+                                    <option value="exposition">Exposition</option>
+                                    <option value="festival">Festival</option>
+                                    <option value="conférence">Conférence</option>
+                                    <option value="spectacle-danse">Spectacle de danse</option>
+                                    <option value="atelier-artistique">Atelier artistique</option>
+                                    <option value="cirque">Spectacle de cirque</option>
+                                    <!-- Ajoutez d'autres options selon vos besoins -->
+                                </select>
+                            </div>
+                            <div class="area row ox">
+                                <label>Nom promoteur:</label>
+                                <input class="ox" type="text" placeholder="nom promoteur" />
+                            </div>
+                            <div class="area row ox">
+                                <label>Intitulé:</label>
+                                <input class="ox" type="text" placeholder="Titre de l'événement" />
+                            </div>
+                            <div class="area row ox">
+                                <label><i class="fas fa-clock"></i>Heure :</label>
+                                <input class="ox" type="text" placeholder="10h30" />
+                            </div>
+                            <div class="area row ox">
+                                <label><i class="far fa-calendar"></i>Date de début :</label>
+                                <input class="ox date-picker" type="text" placeholder="Saisir ou sélectionner une date" />
+                            </div>
+                            <div class="area row ox">
+                                <label><i class="far fa-calendar"></i>Date de fin :</label>
+                                <input class="ox date-picker" type="text" placeholder="Saisir ou sélectionner une date" />
+                            </div>
+                            <div class="area row ox">
+                                <label><i class="fas fa-map-marker-alt"></i>Lieu:</label>
+                                <input class="ox" type="text" placeholder="Lieu de l'événement" />
+                            </div>
+                            <div class="area row ox">
+                                <label>Photo :</label>
+                                <input type="file" class="ox" />
+                            </div>
+                            
+                            <center><li class="submit">
+                                <input type="submit" value="Publier l'événement">
+                            </li></center>
+                 
+                        </div>
+                    </form>
+                    
+            </div>
+        </div>
+    </div>
+
+    <footer class="shadow-block">
+        <div class="area h-expand jc-center text-center">Aucun droit réservé !</div>
+    </footer>
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        // Initialisez les champs de date avec la classe "date-picker"
+        flatpickr(".date-picker", {
+            dateFormat: "Y-m-d", // Format de la date (à ajuster selon vos besoins)
+            enableTime: false, // Désactive le sélecteur d'heure
+            // Ajoutez d'autres options si nécessaire
+        });
+    </script>
+</body>
+
+</html>

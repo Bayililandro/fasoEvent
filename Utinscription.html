@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #preferences-menu {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        #preferences-link {
+            cursor: pointer;
+            color: blue;
+            text-decoration: none;
+        }
+      
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="form-section">
+        <center><legend><h1>Créer votre compte</h1></legend></center>
+   <!-- multistep form -->
+<form id="msform">
+    <!-- progressbar -->
+    <ul id="progressbar">
+      <li class="active">Account Setup</li>
+      <li>Social Profiles</li>
+      <li>Personal Details</li>
+    </ul>
+    <!-- fieldsets -->
+    <fieldset>
+      <h2 class="fs-title">Créer votre compte Utilisateur</h2>
+      <h3 class="fs-subtitle">Etape1</h3>
+      <input type="text" name="fname" placeholder="Nom" />
+      <input type="text" name="fname" placeholder="Prenom" />
+      <input type="button" name="suivant" class="next action-button" value="suivant" />
+    </fieldset>
+    <fieldset>
+      <h2 class="fs-title">Vous êtes à l'étape 2</h2>
+      <h3 class="fs-subtitle">Etape 2</h3>
+      <textarea name="address" placeholder="Address"></textarea>
+    <!-- Remplacez cette ligne -->
+    <input type="button" id="preferences-link" value="Vos préférences événementielles">
+    <!-- Menu contextuel -->
+    <div id="preferences-menu">
+        <label>
+            <input type="checkbox" name="preferences" value="projection"> Projection
+        </label>
+        <label>
+            <input type="checkbox" name="preferences" value="cinématographie"> Cinématographie
+        </label>
+        <label>
+            <input type="checkbox" name="preferences" value="concerts"> Concerts
+        </label>
+        <label>
+            <input type="checkbox" name="preferences" value="théâtre"> Théâtre
+        </label>
+        <label>
+            <input type="checkbox" name="preferences" value="conference"> Conférence
+        </label>
+    </div>
+      <input type="button" name="Precedent" class="previous action-button" value="Precedent" />
+      <input type="button" name="suivant" class="next action-button" value="suivant" />
+    </fieldset>
+    <fieldset>
+    <h2 class="fs-title">Vous etes à la fin</h2>
+                <h3 class="fs-subtitle">Etape3</h3>
+                <input type="text" name="email" placeholder="Email" />
+                <input type="password" name="pass" placeholder="mot de passe" />
+                <input type="password" name="cpass" placeholder="Confirmé le mot de passe" />
+                <input type="button" name="Precedent" class="previous action-button" value="Precedent" />
+                <center><button class="form-section button" onclick="return validerFormulaire()">
+                    S'inscrire
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button></center>
+            </fieldset>
+        </form>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var preferencesLink = document.getElementById("preferences-link");
+            var preferencesMenu = document.getElementById("preferences-menu");
+
+            preferencesLink.addEventListener("click", function (e) {
+                e.preventDefault();
+                preferencesMenu.style.display = (preferencesMenu.style.display === "block") ? "none" : "block";
+            });
+            // Ajoutez cet événement pour fermer le menu contextuel lors d'un clic en dehors
+    document.addEventListener("click", function (e) {
+        var isClickInsideMenu = preferencesLink.contains(e.target) || preferencesMenu.contains(e.target);
+        if (!isClickInsideMenu) {
+            preferencesMenu.style.display = "none";
+        }
+    });
+        });
+        
+    </script>
+    <script src="js.js"></script>
+</body>
+</html>
